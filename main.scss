@@ -1,0 +1,13 @@
+@import "o-grid/main";
+@import "o-colors/main";
+
+@import "src/scss/color-use-cases";
+@import "src/scss/variables";
+@import "src/scss/mixins";
+@import "src/scss/standard";
+
+@if $o-card-is-silent == false {
+	.o-card {
+		@include oCard;
+	}
+}

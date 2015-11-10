@@ -1,0 +1,24 @@
+{
+    "description": "Card view of any kind of content",
+    "origamiType": "module",
+    "origamiVersion": 1,
+    "support": "https://github.com/Financial-Times/o-card/issues",
+    "supportStatus": "experimental",
+    "browserFeatures": {},
+    "ci": {
+        "travis": "https://api.travis-ci.org/repos/Financial-Times/o-card/builds.json"
+    },
+    "demosDefaults": {
+        "sass": "demos/src/main.scss",
+        "documentClasses": ""
+    },
+    "demos": [
+        {
+            "name": "standard",
+            "expanded": true,
+            "description": "Standard card",
+            "template": "demos/src/main.mustache",
+            "path": "/demos/standard.html"
+        }
+    ]
+}
