@@ -19,6 +19,28 @@
             "description": "Standard card",
             "template": "demos/src/main.mustache",
             "path": "/demos/standard.html"
+        },
+        {
+            "name": "image-vertical",
+            "expanded": false,
+            "description": "Card with vertically aligned image",
+            "template": "demos/src/main.mustache",
+            "data": {
+                "card-image-url": "",
+                "card-image-alignment": "vertical"
+            },
+            "path": "/demos/image-vertical.html"
+        },
+        {
+            "name": "image-horizontal",
+            "expanded": false,
+            "description": "Card with horizontally aligned image",
+            "template": "demos/src/main.mustache",
+            "data": {
+                "card-image-url": "",
+                "card-image-alignment": "horizontal"
+            },
+            "path": "/demos/image-horizontal.html"
         }
     ]
 }

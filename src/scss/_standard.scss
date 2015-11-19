@@ -1,3 +1,23 @@
 @mixin oCard {
+	@include oColorsFor(o-card box, background);
+
+	height: 100%;
+	display: inline-block;
+	overflow: hidden;
+}
+
+@mixin oCardContainer {
+	float: left;
+	padding: $o-card-spacing-unit/2;
+}
+
+@mixin oCardImage($alignment: vertical) {
+	@if $alignment == vertical {
+		width: 100%;
+		display: block;
+	} @else {
+		height: 100%;
+		float: left;
+	}
 
 }

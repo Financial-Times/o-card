@@ -10,4 +10,18 @@
 	.o-card {
 		@include oCard;
 	}
+
+	.o-card__container {
+		@include oCardContainer;
+	}
+
+	.o-card__image {
+		&--vertical {
+			@include oCardImage(vertical);
+		}
+
+		&--horizontal {
+			@include oCardImage(horizontal);
+		}
+	}
 }
