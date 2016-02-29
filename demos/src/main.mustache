@@ -1,13 +1,18 @@
-<div class="demo-container demo-container--{{card-image-alignment}}">
-	<div class="o-card" data-o-component="o-card">
-		<span class="o-card__tag">Renewable energy</span>
-		<div class="o-card__inner o-card__inner--{{card-image-alignment}}">
-			<h2>Demo card long title</h2>
+<div class="demo-container demo-container--{{card-alignment}}">
+	<div class="o-card o-card--{{card-alignment}}" data-o-component="o-card">
+		<span class="o-card__tag o-card__tag--{{card-alignment}}">Demo card tag</span>
+
+		{{#card-alignment}}
+		<div class="o-card__image o-card__image--{{card-alignment}}">
+			<img src="https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?source=o-card-demo" class="" alt="demo image"/>
+		</div>
+		{{/card-alignment}}
+
+		<div class="o-card__inner o-card__inner--{{card-alignment}}">
+			<h2>Demo card</h2>
 			<p>My demo card</p>
 		</div>
-		<time data-o-component="o-date" class="o-date o-card__time" data-recent="" datetime="2015-06-03T12:35:48Z">2015-06-03T12:35:48Z</time>
-		{{#card-image-alignment}}
-			<img src="https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?source=o-card-demo" class="o-card__image--{{card-image-alignment}}" alt="demo image"/>
-		{{/card-image-alignment}}
+
+		<time data-o-component="o-date" class="o-date o-card__time o-card__time--{{card-alignment}}" data-recent="" datetime="2016-02-29T12:35:48Z">2016-02-29T12:35:48Z</time>
 	</div>
 </div>

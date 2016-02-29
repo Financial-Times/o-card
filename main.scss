@@ -10,30 +10,42 @@
 
 @if $o-card-is-silent == false {
 	.o-card {
-		@include oCard;
+		@include oCard();
+
+		&--landscape {
+			@include oCard(landscape);
+		}
 	}
 
 	.o-card__tag {
 		@include oCardTag;
+
+		&--landscape {
+			@include oCardTag(landscape);
+		}
 	}
 
 	.o-card__inner {
-		&--vertical {
-			@include oCardInner(vertical);
-		}
+		@include oCardInner;
 
-		&--horizontal {
-			@include oCardInner(horizontal);
+		&--landscape {
+			@include oCardInner(landscape);
+		}
+	}
+
+	.o-card__time {
+		@include oCardTime;
+
+		&--landscape {
+			@include oCardTime(landscape);
 		}
 	}
 
 	.o-card__image {
-		&--vertical {
-			@include oCardImage(vertical);
-		}
+		@include oCardImage;
 
-		&--horizontal {
-			@include oCardImage(horizontal);
+		&--landscape {
+			@include oCardImage(landscape);
 		}
 	}
 }

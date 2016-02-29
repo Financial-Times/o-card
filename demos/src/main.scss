@@ -3,12 +3,14 @@ $o-card-is-silent: false;
 
 .demo-container {
 	padding: 20px;
-}
-
-.demo-container--vertical {
 	width: 200px;
 }
 
-.demo-container--horizontal {
+.demo-container--portrait {
+	width: 200px;
+}
+
+.demo-container--landscape {
+	width: 500px;
 	height: 200px;
 }

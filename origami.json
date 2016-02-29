@@ -28,7 +28,7 @@
             "template": "demos/src/main.mustache",
             "data": {
                 "card-image-url": "",
-                "card-image-alignment": "vertical"
+                "card-alignment": "portrait"
             },
             "path": "/demos/image-vertical.html"
         },
@@ -39,7 +39,7 @@
             "template": "demos/src/main.mustache",
             "data": {
                 "card-image-url": "",
-                "card-image-alignment": "horizontal"
+                "card-alignment": "landscape"
             },
             "path": "/demos/image-horizontal.html"
         }

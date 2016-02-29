@@ -4,6 +4,7 @@ var oDate = require('o-date');
 
 function init(container) {
 	container = container || document.body;
+
 	oDate.init(container);
 }
 
