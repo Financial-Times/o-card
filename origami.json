@@ -10,6 +10,7 @@
     },
     "demosDefaults": {
         "sass": "demos/src/main.scss",
+        "js": "demos/src/main.js",
         "documentClasses": ""
     },
     "demos": [
