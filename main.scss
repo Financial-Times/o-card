@@ -13,8 +13,18 @@
 		@include oCard;
 	}
 
-	.o-card__container {
-		@include oCardContainer;
+	.o-card__tag {
+		@include oCardTag;
+	}
+
+	.o-card__inner {
+		&--vertical {
+			@include oCardInner(vertical);
+		}
+
+		&--horizontal {
+			@include oCardInner(horizontal);
+		}
 	}
 
 	.o-card__image {

@@ -1,7 +1,8 @@
 @mixin oCard {
 	@include oColorsFor(o-card box, background);
-	height: 100%;
 	position: relative;
+	height: 100%;
+	padding: $o-card-spacing-unit;
 
 	display: inline-block;
 	// Force this element to have layout in ie6/7 so we can use inline-block
@@ -11,18 +12,32 @@
 	box-shadow: 0 1px 0 0 oColorsGetColorFor(o-card-shadow, shadow);
 }
 
-@mixin oCardContainer {
-	float: left;
-	padding: $o-card-spacing-unit;
+@mixin oCardTag {
+	display: block;
+	margin: 0 0 $o-card-spacing-unit/2;
+	color: $o-card-tag-color;
+	font-size: $o-card-tag-font-size;
+	line-height: $o-card-tag-line-height;
+}
+
+@mixin oCardInner($alignment: vertical) {
+	@if $alignment != vertical {
+		float: right;
+	}
 }
 
 @mixin oCardImage($alignment: vertical) {
+	margin: 0;
+
 	@if $alignment == vertical {
-		width: 100%;
 		display: block;
+		width: 100%;
+		height: auto;
 	} @else {
-		height: 100%;
+		$o-card-tag-height: ($o-card-spacing-unit/2) + $o-card-tag-line-height;
 		float: left;
-		position: absolute;
+		width: auto;
+		height: calc(100% - #{$o-card-tag-height});
+		margin-right: $o-card-spacing-unit;
 	}
 }
