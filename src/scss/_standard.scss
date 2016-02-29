@@ -6,12 +6,14 @@
 	display: inline-block;
 	// Force this element to have layout in ie6/7 so we can use inline-block
 	*display: inline;
-  zoom: 1;
+	zoom: 1;
+
+	box-shadow: 0 1px 0 0 oColorsGetColorFor(o-card-shadow, shadow);
 }
 
 @mixin oCardContainer {
 	float: left;
-	padding: $o-card-spacing-unit/2;
+	padding: $o-card-spacing-unit;
 }
 
 @mixin oCardImage($alignment: vertical) {
@@ -23,5 +25,4 @@
 		float: left;
 		position: absolute;
 	}
-
 }
