@@ -1,19 +1,10 @@
 @mixin oCard($alignment: portrait) {
-	@include oColorsFor(o-card box, background);
-	width: 100%;
-	padding: $o-card-spacing-unit;
-	padding-bottom: 0;
-	display: flex;
-	box-shadow: 0 1px 0 0 oColorsGetColorFor(o-card-shadow, shadow);
-
 	@if $alignment == landscape {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	} @else {
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
+		@include oCardBlockBase;
 	}
 }
 

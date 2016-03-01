@@ -1,3 +1,15 @@
+@mixin oCardBlockBase {
+	@include oColorsFor(o-card box, background);
+	width: 100%;
+	padding: $o-card-spacing-unit;
+	padding-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	box-shadow: 0 1px 0 0 oColorsGetColorFor(o-card-shadow, shadow);
+}
+
 @mixin oCardElementBase($element) {
 	display: block;
 
