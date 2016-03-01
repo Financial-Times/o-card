@@ -1,0 +1,36 @@
+@mixin oCardThemeLarge {
+	.o-card__image {
+		order: 5;
+	}
+}
+
+@mixin oCardThemeLandscape {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.o-card__tag,
+	.o-card__excerpt,
+	.o-card__time {
+		flex-basis: 100%;
+	}
+
+	.o-card__image {
+		flex-basis: 35%;
+		order: 2;
+		margin-bottom: 0;
+	}
+
+	.o-card__heading {
+		flex-basis: 60%;
+		order: 3;
+	}
+
+	.o-card__excerpt {
+		order: 4;
+	}
+
+	.o-card__time {
+		order: 5;
+	}
+}

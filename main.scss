@@ -6,32 +6,27 @@
 @import "src/scss/variables";
 
 @import 'src/scss/themes';
-@import "src/scss/mixins";
 @import "src/scss/standard";
 
 @if $o-card-is-silent == false {
 	.o-card {
-		@include oCard();
+		@include oCard;
 
 		&--landscape {
-			@include oCard(landscape);
+			@include oCardThemeLandscape;
+		}
+
+		&--large {
+			@include oCardThemeLarge;
 		}
 	}
 
 	.o-card__tag {
 		@include oCardTag;
-
-		.o-card--landscape & {
-			@include oCardTag(landscape);
-		}
 	}
 
 	.o-card__heading {
 		@include oCardHeading;
-
-		.o-card--landscape & {
-			@include oCardHeading(landscape);
-		}
 	}
 
 	.o-card__sub-heading {
@@ -40,30 +35,15 @@
 
 	.o-card__excerpt {
 		@include oCardExcerpt;
-
-		.o-card--landscape & {
-			@include oCardExcerpt(landscape);
-		}
 	}
 
 	.o-card__time {
 		@include oCardTime;
 
-		.o-card--landscape & {
-			@include oCardTime(landscape);
-		}
 	}
 
 	.o-card__image {
 		@include oCardImage;
-
-		.o-card--landscape & {
-			@include oCardImage(landscape);
-		}
-
-		.o-card--large & {
-			@include oCardImage(large);
-		}
 	}
 
 	.o-card__links {

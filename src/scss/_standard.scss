@@ -1,37 +1,35 @@
-@mixin oCard($alignment: portrait) {
-	@if $alignment == landscape {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	} @else {
-		@include oCardBlockBase;
-	}
+@mixin oCard {
+	@include oColorsFor(o-card box, background);
+	width: 100%;
+	padding: $o-card-spacing-unit;
+	padding-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	box-shadow: 0 1px 0 0 oColorsGetColorFor(o-card-shadow, shadow);
 }
 
-@mixin oCardTag($alignment: portrait) {
-	@if $alignment == landscape {
-		flex-basis: 100%;
-	} @else {
-		@include oCardElementBase(tag);
-	}
+@mixin oCardTag {
+	margin: 0 0 $o-card-spacing-unit/2;
+	color: $o-card-tag-color;
+	font-family: sans-serif;
+	font-size: $o-card-tag-font-size;
+	font-weight: 600;
+	line-height: $o-card-tag-line-height;
 }
 
-@mixin oCardTime($alignment: portrait) {
-	@if $alignment == landscape {
-		flex-basis: 100%;
-		order: 4;
-	} @else {
-		@include oCardElementBase(time);
-	}
+@mixin oCardTime {
+	display: block;
+	margin: $o-card-spacing-unit/2 0 $o-card-spacing-unit;
+	color: $o-card-time-color;
+	font-family: sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
 }
 
-@mixin oCardHeading($alignment: portrait) {
-	@if $alignment == landscape {
-		flex-basis: 60%;
-		order: 3;
-	} @else {
-		margin: 0;
-	}
+@mixin oCardHeading {
+	margin: 0;
 }
 
 @mixin oCardSubHeading() {
@@ -40,26 +38,22 @@
 	font-size: 16px;
 }
 
-@mixin oCardExcerpt($alignment: portrait) {
-	@if $alignment == landscape {
-		order: 4;
-	} @else {
-		@include oColorsFor(o-card-excerpt, text);
-		flex-basis: 100%;
-		margin-top: $o-card-spacing-unit/2;
-	}
+@mixin oCardExcerpt {
+	@include oColorsFor(o-card-excerpt, text);
+	flex-basis: 100%;
+	margin-top: $o-card-spacing-unit/2;
 }
 
-@mixin oCardImage($alignment: portrait) {
-	@if $alignment == landscape {
-		flex-basis: 35%;
-		margin-bottom: 0;
-		order: 2;
-	} @else if $alignment == large {
-		order: 5;
-	} @else {
-		@include oCardElementBase(image);
-		order: -1;
+@mixin oCardImage {
+	display: block;
+	margin: 0 0 $o-card-spacing-unit;
+	order: -1;
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: 0;
 	}
 }
 
