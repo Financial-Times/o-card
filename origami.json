@@ -60,6 +60,21 @@
             "path": "/demos/image-horizontal.html"
         },
         {
+            "name": "horizontal",
+            "expanded": false,
+            "description": "Horizontally aligned card",
+            "template": "demos/src/main.mustache",
+            "data": {
+                "card-image-url": "",
+                "card-modifier": "landscape",
+                "card-heading": "Japan sells negative yield 10-year bonds",
+                "card-sub-heading": "",
+                "card-excerpt": "Bondholders pay government for the privilege of lending it money",
+                "card-links": ""
+            },
+            "path": "/demos/image-horizontal.html"
+        },
+        {
             "name": "image-horizontal-excerpt",
             "expanded": false,
             "description": "Card with horizontally aligned image and excerpt text",

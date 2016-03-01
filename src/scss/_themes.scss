@@ -18,11 +18,13 @@
 	.o-card__image {
 		flex-basis: 35%;
 		order: 2;
+		margin-right: 5%;
 		margin-bottom: 0;
 	}
 
 	.o-card__heading {
 		flex-basis: 60%;
+		flex-grow: 1; // Will grow to fill 100% of the space if there is no image
 		order: 3;
 	}
 
