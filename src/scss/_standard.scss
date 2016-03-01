@@ -32,24 +32,22 @@
 
 	@if $alignment == landscape {
 		flex-basis: 100%;
-	} @else {
-		// order: 2;
 	}
 
 }
 
 @mixin oCardTime($alignment: portrait) {
 	display: block;
-
-	@if $alignment == landscape {
-		flex-basis: 100%;
-		order: 4;
-	}
 	margin: $o-card-spacing-unit/2 0 $o-card-spacing-unit;
 	color: $o-card-time-color;
 	font-family: sans-serif;
 	font-size: 12px;
 	text-transform: uppercase;
+
+	@if $alignment == landscape {
+		flex-basis: 100%;
+		order: 4;
+	}
 }
 
 @mixin oCardInner($alignment: portrait) {
