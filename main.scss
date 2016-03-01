@@ -25,12 +25,16 @@
 		}
 	}
 
-	.o-card__header {
-		@include oCardHeader;
+	.o-card__heading {
+		@include oCardHeading;
 
 		.o-card--landscape & {
-			@include oCardHeader(landscape);
+			@include oCardHeading(landscape);
 		}
+	}
+
+	.o-card__sub-heading {
+		@include oCardSubHeading;
 	}
 
 	.o-card__excerpt {
@@ -59,5 +63,9 @@
 		.o-card--large & {
 			@include oCardImage(large);
 		}
+	}
+
+	.o-card__links {
+		@include oCardLinks;
 	}
 }

@@ -25,7 +25,7 @@
 	}
 }
 
-@mixin oCardHeader($alignment: portrait) {
+@mixin oCardHeading($alignment: portrait) {
 	@if $alignment == landscape {
 		flex-basis: 60%;
 		order: 3;
@@ -34,10 +34,17 @@
 	}
 }
 
+@mixin oCardSubHeading() {
+	@include oColorsFor(o-card-sub-heading, text);
+	margin-top: 10px;
+	font-size: 16px;
+}
+
 @mixin oCardExcerpt($alignment: portrait) {
 	@if $alignment == landscape {
 		order: 4;
 	} @else {
+		@include oColorsFor(o-card-excerpt, text);
 		flex-basis: 100%;
 		margin-top: $o-card-spacing-unit/2;
 	}
@@ -54,4 +61,13 @@
 		@include oCardElementBase(image);
 		order: -1;
 	}
+}
+
+@mixin oCardLinks {
+	@include oColorsFor(o-card-list, text);
+	list-style: inside;
+	margin-top: 0;
+	margin-bottom: $o-card-spacing-unit;
+	padding-left: 0;
+	order: 6;
 }
