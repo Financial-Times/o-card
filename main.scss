@@ -1,5 +1,6 @@
 @import "o-grid/main";
 @import "o-colors/main";
+@import "o-ft-icons/main";
 
 @import "src/scss/color-use-cases";
 @import "src/scss/variables";
@@ -67,5 +68,9 @@
 
 	.o-card__links {
 		@include oCardLinks;
+	}
+
+	.o-card__link-item {
+		@include oCardLinkItem;
 	}
 }

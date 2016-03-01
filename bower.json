@@ -14,6 +14,7 @@
   "dependencies": {
     "o-grid": "~4.0.0",
     "o-colors": "~3.3.0",
-    "o-date": "^2.2.1"
+    "o-date": "^2.2.1",
+    "o-ft-icons": "^3.3.0 <5"
   }
 }
