@@ -2,7 +2,11 @@
 	<div class="o-card o-card--{{card-modifier}}" data-o-component="o-card">
 		<span class="o-card__tag">Demo card tag</span>
 
-		<h2 class="o-card__header">{{card-header}}</h2>
+		<h2 class="o-card__heading">{{card-heading}}</h2>
+
+		{{#card-sub-heading}}
+			<div class="o-card__sub-heading"><i class="o-card__icon o-card__icon--quotes"></i>{{card-sub-heading}}</div>
+		{{/card-sub-heading}}
 
 		{{#card-excerpt}}
 			<div class="o-card__excerpt">{{card-excerpt}}</div>
@@ -15,5 +19,13 @@
 				<img src="{{card-image-url}}" class="" alt="demo image"/>
 			</div>
 		{{/card-image-url}}
+
+		{{#card-links.length}}
+			<ul class="o-card__links">
+				{{#card-links}}
+					<li class="o-card__link-item">{{link}}</li>
+				{{/card-links}}
+			</ul>
+		{{/card-links.length}}
 	</div>
 </div>

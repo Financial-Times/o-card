@@ -22,8 +22,10 @@
             "data": {
                 "card-image-url": "",
                 "card-modifier": "",
-                "card-header": "Japan sells negative yield 10-year bonds",
-                "card-excerpt": ""
+                "card-heading": "Japan sells negative yield 10-year bonds",
+                "card-sub-heading": "",
+                "card-excerpt": "",
+                "card-links": ""
             },
             "path": "/demos/standard.html"
         },
@@ -35,8 +37,10 @@
             "data": {
                 "card-image-url": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?source=o-card-demo",
                 "card-modifier": "portrait",
-                "card-header": "Japan sells negative yield 10-year bonds",
-                "card-excerpt": ""
+                "card-heading": "Japan sells negative yield 10-year bonds",
+                "card-sub-heading": "",
+                "card-excerpt": "",
+                "card-links": ""
             },
             "path": "/demos/image-vertical.html"
         },
@@ -48,8 +52,10 @@
             "data": {
                 "card-image-url": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?source=o-card-demo",
                 "card-modifier": "landscape",
-                "card-header": "Japan sells negative yield 10-year bonds",
-                "card-excerpt": ""
+                "card-heading": "Japan sells negative yield 10-year bonds",
+                "card-sub-heading": "",
+                "card-excerpt": "",
+                "card-links": ""
             },
             "path": "/demos/image-horizontal.html"
         },
@@ -61,8 +67,10 @@
             "data": {
                 "card-image-url": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?source=o-card-demo",
                 "card-modifier": "landscape",
-                "card-header": "Japan sells negative yield 10-year bonds",
-                "card-excerpt": "Bondholders pay government for the privilege of lending it money"
+                "card-heading": "Japan sells negative yield 10-year bonds",
+                "card-sub-heading": "",
+                "card-excerpt": "Bondholders pay government for the privilege of lending it money",
+                "card-links": ""
             },
             "path": "/demos/image-horizontal-excerpt.html"
         },
@@ -72,12 +80,35 @@
             "description": "Large Card with all content examples",
             "template": "demos/src/main.mustache",
             "data": {
+                "card-image-url": "",
+                "card-modifier": "large",
+                "card-heading": "Japan sells negative yield 10-year bonds",
+                "card-sub-heading": "Leo Lewis",
+                "card-excerpt": "Bondholders pay government for the privilege of lending it money",
+                "card-links": [
+                	{"link": "link title"},
+                	{"link": "link title"},
+                	{"link": "link title"}
+                ]
+            }
+        },
+        {
+            "name": "large-with-image",
+            "expanded": false,
+            "description": "Large Card with all content examples",
+            "template": "demos/src/main.mustache",
+            "data": {
                 "card-image-url": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?source=o-card-demo",
                 "card-modifier": "large",
-                "card-header": "Japan sells negative yield 10-year bonds",
-                "card-excerpt": "Bondholders pay government for the privilege of lending it money"
-            },
-            "path": "/demos/large.html"
+                "card-heading": "Japan sells negative yield 10-year bonds",
+                "card-sub-heading": "Leo Lewis",
+                "card-excerpt": "Bondholders pay government for the privilege of lending it money",
+                "card-links": [
+                	{"link": "link title"},
+                	{"link": "link title"},
+                	{"link": "link title"}
+                ]
+            }
         }
     ]
 }
