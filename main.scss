@@ -20,23 +20,31 @@
 	.o-card__tag {
 		@include oCardTag;
 
-		&--landscape {
+		.o-card--landscape & {
 			@include oCardTag(landscape);
 		}
 	}
 
-	.o-card__inner {
-		@include oCardInner;
+	.o-card__header {
+		@include oCardHeader;
 
-		&--landscape {
-			@include oCardInner(landscape);
+		.o-card--landscape & {
+			@include oCardHeader(landscape);
+		}
+	}
+
+	.o-card__excerpt {
+		@include oCardExcerpt;
+
+		.o-card--landscape & {
+			@include oCardExcerpt(landscape);
 		}
 	}
 
 	.o-card__time {
 		@include oCardTime;
 
-		&--landscape {
+		.o-card--landscape & {
 			@include oCardTime(landscape);
 		}
 	}
@@ -44,8 +52,12 @@
 	.o-card__image {
 		@include oCardImage;
 
-		&--landscape {
+		.o-card--landscape & {
 			@include oCardImage(landscape);
+		}
+
+		.o-card--large & {
+			@include oCardImage(large);
 		}
 	}
 }

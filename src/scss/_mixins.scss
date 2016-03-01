@@ -1,1 +1,31 @@
+@mixin oCardElementBase($element) {
+	display: block;
 
+	@if $element == tag {
+		margin: 0 0 $o-card-spacing-unit/2;
+		color: $o-card-tag-color;
+		font-family: sans-serif;
+		font-size: $o-card-tag-font-size;
+		font-weight: 600;
+		line-height: $o-card-tag-line-height;
+	}
+
+	@if $element == time {
+		margin: $o-card-spacing-unit/2 0 $o-card-spacing-unit;
+		color: $o-card-time-color;
+		font-family: sans-serif;
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+
+	@if $element == image {
+		margin: 0 0 $o-card-spacing-unit;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin: 0;
+		}
+	}
+}
