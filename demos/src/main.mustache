@@ -1,12 +1,8 @@
 <div class="demo-container demo-container--{{card-modifier}}">
 	<div class="o-card o-card--{{card-modifier}}" data-o-component="o-card">
-		<span class="o-card__tag">Demo card tag</span>
+		<a href="#" class="o-card__tag">Demo card tag</a>
 
-		<h2 class="o-card__heading">{{card-heading}}</h2>
-
-		{{#card-sub-heading}}
-			<div class="o-card__sub-heading"><i class="o-card__icon o-card__icon--quotes"></i>{{card-sub-heading}}</div>
-		{{/card-sub-heading}}
+		<h2 class="o-card__heading"><a href="#">{{card-heading}}</a></h2>
 
 		{{#card-excerpt}}
 			<div class="o-card__excerpt">{{card-excerpt}}</div>
@@ -15,17 +11,17 @@
 		<time data-o-component="o-date" class="o-date o-card__time" datetime="2016-02-29T12:35:48Z">2016-02-29T12:35:48Z</time>
 
 		{{#card-image-url}}
-			<div class="o-card__image">
-				<img src="{{card-image-url}}" class="" alt="demo image"/>
+			<div class="o-card__image o-card__image--{{card-image-alignment}}">
+				<img src="{{card-image-url}}" alt="demo image"/>
 			</div>
 		{{/card-image-url}}
 
-		{{#card-links.length}}
-			<ul class="o-card__links">
-				{{#card-links}}
-					<li class="o-card__link-item">{{link}}</li>
-				{{/card-links}}
+		{{#card-related-content.length}}
+			<ul class="o-card__related-content">
+				{{#card-related-content}}
+					<li class="o-card__related-content-item"><a href="#">{{link}}</a></li>
+				{{/card-related-content}}
 			</ul>
-		{{/card-links.length}}
+		{{/card-related-content.length}}
 	</div>
 </div>

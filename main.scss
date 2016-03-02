@@ -29,28 +29,23 @@
 		@include oCardHeading;
 	}
 
-	.o-card__sub-heading {
-		@include oCardSubHeading;
-	}
-
-	.o-card__excerpt {
-		@include oCardExcerpt;
+	.o-card__standfirst {
+		@include oCardStandfirst;
 	}
 
 	.o-card__time {
 		@include oCardTime;
-
 	}
 
 	.o-card__image {
 		@include oCardImage;
 	}
 
-	.o-card__links {
-		@include oCardLinks;
+	.o-card__related-content {
+		@include oCardRelatedContent;
 	}
 
-	.o-card__link-item {
-		@include oCardLinkItem;
+	.o-card__related-content-item {
+		@include oCardRelatedContentItem;
 	}
 }

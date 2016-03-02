@@ -32,13 +32,7 @@
 	margin: 0;
 }
 
-@mixin oCardSubHeading() {
-	@include oColorsFor(o-card-sub-heading, text);
-	margin-top: 10px;
-	font-size: 16px;
-}
-
-@mixin oCardExcerpt {
+@mixin oCardStandfirst {
 	@include oColorsFor(o-card-excerpt, text);
 	flex-basis: 100%;
 	margin-top: $o-card-spacing-unit/2;
@@ -57,7 +51,7 @@
 	}
 }
 
-@mixin oCardLinks {
+@mixin oCardRelatedContent {
 	@include oColorsFor(o-card-list, text);
 	list-style: inside;
 	margin-top: 0;
@@ -66,7 +60,7 @@
 	order: 6;
 }
 
-@mixin oCardLinkItem {
+@mixin oCardRelatedContentItem {
 	list-style: none;
 	font-size: 18px;
 	line-height: 1.22;
