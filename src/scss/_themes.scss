@@ -10,14 +10,22 @@
 	}
 
 	.o-card__image {
-		flex-basis: 35%;
-		order: 2;
-		margin-right: 5%;
 		margin-bottom: 0;
+
+		&--left {
+			flex-basis: 100px;
+			order: 2;
+			margin-right: 5%;
+		}
+
+		&--right {
+			flex-basis: 50%;
+			order: 3;
+		}
 	}
 
 	.o-card__heading {
-		flex-basis: 60%;
+		flex-basis: 50%; // For when an image is right aligned
 		flex-grow: 1; // Will grow to fill 100% of the space if there is no image
 		order: 3;
 	}
