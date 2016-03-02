@@ -14,6 +14,9 @@
 
 		&--left {
 			flex-basis: 100px;
+			// To prevent the content of the flex-item breaking out of the container in Firefox
+			// https://bugzilla.mozilla.org/show_bug.cgi?id=1108514#c2
+			min-width: 0;
 			order: 2;
 			margin-right: 5%;
 		}
@@ -25,8 +28,11 @@
 	}
 
 	.o-card__heading {
-		flex-basis: 50%; // For when an image is right aligned
-		flex-grow: 1; // Will grow to fill 100% of the space if there is no image
+		// 50% so the heading will fit against an image which is right aligned
+		flex-basis: 50%;
+		// Will grow to fill the remaining space when an image is left aligned and 100px
+		// or 100% of the space if there is no image
+		flex-grow: 1;
 		order: 3;
 	}
 

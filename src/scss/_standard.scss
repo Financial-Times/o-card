@@ -14,7 +14,8 @@
 	@include oColorsFor(o-card-tag, text);
 	@include oTypographySansBold(s);
 	margin: 0 0 $o-card-spacing-unit;
-	text-decoration: none; // If the tag is used as a link
+	// If the tag is used as a link
+	text-decoration: none;
 }
 
 @mixin oCardTimestamp {
@@ -33,17 +34,17 @@
 		@include oTypographyHeading3;
 	}
 
+	// If there is a link in the heading
 	a {
 		@include oColorsFor(link-title, text);
-		text-decoration: none; // If the heading is used as a link
+		text-decoration: none;
 	}
 }
 
 @mixin oCardStandfirst {
 	@include oColorsFor(o-card-excerpt, text);
 	@include oTypographySans(s);
-	flex-basis: 100%;
-	margin-top: $o-card-spacing-unit 0 0;
+	margin: $o-card-spacing-unit/2 0 0;
 }
 
 @mixin oCardImage {
@@ -82,5 +83,10 @@
 		display: inline-block;
 		margin-right: $o-card-spacing-unit;
 		font-size: 12px;
+	}
+
+	a {
+		@include oColorsFor(link-title, text);
+		text-decoration: none;
 	}
 }
