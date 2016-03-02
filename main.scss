@@ -15,10 +15,6 @@
 		&--landscape {
 			@include oCardThemeLandscape;
 		}
-
-		&--large {
-			@include oCardThemeLarge;
-		}
 	}
 
 	.o-card__tag {

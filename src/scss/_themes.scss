@@ -1,16 +1,10 @@
-@mixin oCardThemeLarge {
-	.o-card__image {
-		order: 5;
-	}
-}
-
 @mixin oCardThemeLandscape {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
 
 	.o-card__tag,
-	.o-card__excerpt,
+	.o-card__standfirst,
 	.o-card__time {
 		flex-basis: 100%;
 	}
@@ -28,7 +22,7 @@
 		order: 3;
 	}
 
-	.o-card__excerpt {
+	.o-card__standfirst {
 		order: 4;
 	}
 
