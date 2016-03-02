@@ -1,6 +1,7 @@
 @import "o-grid/main";
 @import "o-colors/main";
-@import "o-ft-icons/main";
+@import "o-typography/main";
+// @import "o-ft-icons/main";
 
 @import "src/scss/color-use-cases";
 @import "src/scss/variables";
@@ -29,8 +30,8 @@
 		@include oCardStandfirst;
 	}
 
-	.o-card__time {
-		@include oCardTime;
+	.o-card__timestamp {
+		@include oCardTimestamp;
 	}
 
 	.o-card__image {

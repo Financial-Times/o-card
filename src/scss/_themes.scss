@@ -5,7 +5,7 @@
 
 	.o-card__tag,
 	.o-card__standfirst,
-	.o-card__time {
+	.o-card__timestamp {
 		flex-basis: 100%;
 	}
 
@@ -34,7 +34,7 @@
 		order: 4;
 	}
 
-	.o-card__time {
+	.o-card__timestamp {
 		order: 5;
 	}
 }

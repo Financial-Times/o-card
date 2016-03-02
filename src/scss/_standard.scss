@@ -12,30 +12,47 @@
 
 @mixin oCardTag {
 	@include oColorsFor(o-card-tag, text);
-	margin: 0 0 $o-card-spacing-unit/2;
+	@include oTypographySansBold(s);
+	margin: 0 0 $o-card-spacing-unit;
+	text-decoration: none; // If the tag is used as a link
 }
 
-@mixin oCardTime {
+@mixin oCardTimestamp {
 	@include oColorsFor(o-card-timestamp, text);
+	@include oTypographySans(xs);
 	display: block;
-	margin: $o-card-spacing-unit/2 0 $o-card-spacing-unit;
+	margin: $o-card-spacing-unit 0;
 	text-transform: uppercase;
 }
 
 @mixin oCardHeading {
-	margin: 0;
+	@include oTypographyHeading2;
+	margin-bottom: $o-card-spacing-unit;
+
+	&--small {
+		@include oTypographyHeading3;
+	}
+
+	a {
+		@include oColorsFor(link-title, text);
+		text-decoration: none; // If the heading is used as a link
+	}
 }
 
 @mixin oCardStandfirst {
 	@include oColorsFor(o-card-excerpt, text);
+	@include oTypographySans(s);
 	flex-basis: 100%;
-	margin-top: $o-card-spacing-unit/2;
+	margin-top: $o-card-spacing-unit 0 0;
 }
 
 @mixin oCardImage {
 	display: block;
 	margin: 0 0 $o-card-spacing-unit;
-	order: -1;
+
+	&--top {
+		order: -1;
+	}
 
 	img {
 		display: block;
@@ -47,7 +64,7 @@
 
 @mixin oCardRelatedContent {
 	@include oColorsFor(o-card-list, text);
-	list-style: inside;
+	list-style: none inside;
 	margin-top: 0;
 	margin-bottom: $o-card-spacing-unit;
 	padding-left: 0;
@@ -55,14 +72,15 @@
 }
 
 @mixin oCardRelatedContentItem {
-	list-style: none;
+	@include oTypographySans(s);
 
 	&:before {
 		@include oColorsFor(o-card-list, text);
 		content: '>';
-		float: left;
-		margin-top: 3px;
-		margin-right: $o-card-spacing-unit/2;
+		position: relative;
+		top: -1px;
+		display: inline-block;
+		margin-right: $o-card-spacing-unit;
 		font-size: 12px;
 	}
 }
