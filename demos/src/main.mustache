@@ -5,10 +5,12 @@
 		<h2 class="o-card__heading"><a href="#">{{card-heading}}</a></h2>
 
 		{{#card-excerpt}}
-			<div class="o-card__excerpt">{{card-excerpt}}</div>
+			<div class="o-card__standfirst">{{card-excerpt}}</div>
 		{{/card-excerpt}}
 
-		<time data-o-component="o-date" class="o-date o-card__time" datetime="2016-02-29T12:35:48Z">2016-02-29T12:35:48Z</time>
+		{{#card-timestamp}}
+			<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{card-timestamp}}">{{card-timestamp}}</time>
+		{{/card-timestamp}}
 
 		{{#card-image-url}}
 			<div class="o-card__image o-card__image--{{card-image-alignment}}">
