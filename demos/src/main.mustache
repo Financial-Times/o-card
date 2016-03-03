@@ -8,15 +8,15 @@
 			<p class="o-card__standfirst">{{card-standfirst}}</p>
 		{{/card-standfirst}}
 
-		{{#card-timestamp}}
-			<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{card-timestamp}}">{{card-timestamp}}</time>
-		{{/card-timestamp}}
-
 		{{#card-image-url}}
 			<div class="o-card__image o-card__image--{{card-image-alignment}}">
 				<img src="{{card-image-url}}" alt="demo image"/>
 			</div>
 		{{/card-image-url}}
+
+		{{#card-timestamp}}
+			<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{card-timestamp}}">{{card-timestamp}}</time>
+		{{/card-timestamp}}
 
 		{{#card-related-content.length}}
 			<ul class="o-card__related-content">

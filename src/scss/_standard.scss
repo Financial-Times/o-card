@@ -60,9 +60,18 @@
 	display: block;
 	flex-shrink: 0;
 	margin: 0 0 $o-card-spacing-unit;
+	// Ensure image is at the bottom of the card,
+	// by default all elements have order: 0
+	order: 1;
 
 	&--top {
 		order: -1;
+	}
+
+	// Make sure image goes to the bottom of the card
+	// set to '6' in case anyone re-orders other card elements
+	&--bottom {
+		order: 6;
 	}
 
 	img {

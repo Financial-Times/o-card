@@ -1,5 +1,6 @@
 @include oColorsSetUseCase(o-card, background, 'pink-tint1');
 @include oColorsSetUseCase(o-card-shadow, shadow, 'pink-tint3');
+@include oColorsSetUseCase(o-card-standout, background, 'pink-tint2');
 @include oColorsSetUseCase(o-card-tag, text, 'claret');
 @include oColorsSetUseCase(o-card-tag-hover, text, 'grey-tint4');
 @include oColorsSetUseCase(o-card-timestamp, text, 'warm-6');

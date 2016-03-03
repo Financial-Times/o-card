@@ -2,6 +2,10 @@
 	border-bottom: 1px solid oColorsGetColorFor(o-card-shadow, shadow);
 }
 
+@mixin oCardThemeStandOut {
+	@include oColorsFor(o-card-standout, background);
+}
+
 @mixin oCardThemeLandscape {
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -14,31 +18,31 @@
 		flex-shrink: 0;
 	}
 
-	.o-card__image {
-		margin-bottom: 0;
+	.o-card__image--left {
+		float: left;
+		width: 100px;
 
-		&--left {
-			flex-basis: 100px;
-			// To prevent the content of the flex-item breaking out of the container in Firefox
-			// https://bugzilla.mozilla.org/show_bug.cgi?id=1108514#c2
-			min-width: 0;
-			order: 2;
-			margin-right: 5%;
-		}
+		flex-basis: 100px;
+		// To prevent the content of the flex-item breaking out of the container in Firefox
+		// https://bugzilla.mozilla.org/show_bug.cgi?id=1108514#c2
+		min-width: 0;
+		order: 2;
+		margin-right: 5%;
+	}
 
-		&--right {
-			flex-basis: 50%;
-			order: 3;
-		}
+	.o-card__image--right {
+		flex-basis: 50%;
+		order: 3;
 	}
 
 	.o-card__heading {
 		// 50% so the heading will fit against an image which is right aligned
-		flex-basis: 50%;
+		flex-basis: 45%;
 		// Will grow to fill the remaining space when an image is left aligned and 100px
 		// or 100% of the space if there is no image
 		flex-grow: 1;
 		order: 3;
+		padding-right: $o-card-spacing-unit;
 	}
 
 	.o-card__standfirst {
@@ -46,6 +50,8 @@
 	}
 
 	.o-card__timestamp {
+		clear: both;
+		width: 100%;
 		order: 5;
 	}
 }

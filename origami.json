@@ -30,14 +30,14 @@
             }
         },
         {
-            "name": "image-vertical",
+            "name": "image-vertical-standout",
             "expanded": false,
             "description": "Card with vertically aligned image",
             "template": "demos/src/main.mustache",
             "data": {
                 "card-image-url": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?source=o-card-demo",
                 "card-image-alignment": "",
-                "card-modifier": "portrait",
+                "card-modifier": "standout",
                 "card-timestamp": "2016-02-29T12:35:48Z",
                 "card-heading": "Japan sells negative yield 10-year bonds",
                 "card-standfirst": "",
@@ -52,6 +52,21 @@
             "data": {
                 "card-image-url": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?source=o-card-demo",
                 "card-image-alignment": "left",
+                "card-modifier": "landscape",
+                "card-timestamp": "2016-02-29T12:35:48Z",
+                "card-heading": "Japan sells negative yield 10-year bonds",
+                "card-standfirst": "",
+                "card-related-content": ""
+            }
+        },
+        {
+            "name": "image-horizontal-right",
+            "expanded": false,
+            "description": "Card with horizontally aligned image",
+            "template": "demos/src/main.mustache",
+            "data": {
+                "card-image-url": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?source=o-card-demo",
+                "card-image-alignment": "right",
                 "card-modifier": "landscape",
                 "card-timestamp": "2016-02-29T12:35:48Z",
                 "card-heading": "Japan sells negative yield 10-year bonds",

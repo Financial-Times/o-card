@@ -23,6 +23,10 @@ $o-hoverable-if-hover-enabled: '';
 		&--stand-alone {
 			@include oCardThemeStandAlone;
 		}
+
+		&--standout {
+			@include oCardThemeStandOut;
+		}
 	}
 
 	.o-card__tag {
