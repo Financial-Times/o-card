@@ -7,7 +7,6 @@
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
-	box-shadow: 0 1px 0 0 oColorsGetColorFor(o-card-shadow, shadow);
 }
 
 @mixin oCardTag {
@@ -16,6 +15,10 @@
 	margin: 0 0 $o-card-spacing-unit;
 	// If the tag is used as a link
 	text-decoration: none;
+
+	#{$o-hoverable-if-hover-enabled} &:hover {
+		@include oColorsFor(o-card-tag-hover, text);
+	}
 }
 
 @mixin oCardTimestamp {
@@ -28,6 +31,7 @@
 
 @mixin oCardHeading {
 	@include oTypographyHeading2;
+	@include oColorsFor(link-title, text);
 	margin-bottom: $o-card-spacing-unit;
 
 	&--small {
@@ -36,8 +40,12 @@
 
 	// If there is a link in the heading
 	a {
-		@include oColorsFor(link-title, text);
+		color: inherit;
 		text-decoration: none;
+	}
+
+	#{$o-hoverable-if-hover-enabled} a:hover {
+		border-bottom: 1px dotted;
 	}
 }
 
@@ -74,19 +82,23 @@
 
 @mixin oCardRelatedContentItem {
 	@include oTypographySans(s);
+	@include oColorsFor(link-title, text);
+	padding: 2px 0;
 
 	&:before {
-		@include oColorsFor(o-card-list, text);
 		content: '>';
 		position: relative;
-		top: -1px;
+		top: -2px;
 		display: inline-block;
 		margin-right: $o-card-spacing-unit;
-		font-size: 12px;
 	}
 
 	a {
-		@include oColorsFor(link-title, text);
+		color: inherit;
 		text-decoration: none;
+	}
+
+	#{$o-hoverable-if-hover-enabled} a:hover {
+		border-bottom: 1px dotted;
 	}
 }
