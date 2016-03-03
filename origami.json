@@ -102,9 +102,9 @@
                 "card-heading": "Japan sells negative yield 10-year bonds",
                 "card-standfirst": "Bondholders pay government for the privilege of lending it money",
                 "card-related-content": [
-                	{"link": "link title"},
-                	{"link": "link title"},
-                	{"link": "link title"}
+                	{"link": "Example related story"},
+                	{"link": "Another related story"},
+                	{"link": "Last related story"}
                 ]
             }
         }
