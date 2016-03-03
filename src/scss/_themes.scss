@@ -1,11 +1,21 @@
+////
+/// @group o-card theme styles
+/// @link http://registry.origami.ft.com/components/o-card
+////
+
+/// Stand alone card theme styles
 @mixin oCardThemeStandAlone {
 	border-bottom: 1px solid oColorsGetColorFor(o-card-shadow, shadow);
 }
 
+/// Stand out card theme styles
 @mixin oCardThemeStandOut {
 	@include oColorsFor(o-card-standout, background);
 }
 
+/// Landscape card themes styles
+/// modifies block elements tag, standfirst, timestamp, image, and heading
+/// to adapt to a landscape/horizontal layout
 @mixin oCardThemeLandscape {
 	flex-direction: row;
 	flex-wrap: wrap;

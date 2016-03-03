@@ -1,3 +1,9 @@
+////
+/// @group o-card base styles
+/// @link http://registry.origami.ft.com/components/o-card
+////
+
+/// Base card styles
 @mixin oCard {
 	@include oColorsFor(o-card box, background);
 	width: 100%;
@@ -9,6 +15,7 @@
 	justify-content: flex-start;
 }
 
+/// Base tag styles
 @mixin oCardTag {
 	@include oColorsFor(o-card-tag, text);
 	@include oTypographySansBold(s);
@@ -22,6 +29,7 @@
 	}
 }
 
+/// Base timestamp styles
 @mixin oCardTimestamp {
 	@include oColorsFor(o-card-timestamp, text);
 	@include oTypographySans(xs);
@@ -30,6 +38,7 @@
 	text-transform: uppercase;
 }
 
+/// Base heading styles (includes link styles within the element)
 @mixin oCardHeading {
 	@include oTypographyHeading2;
 	@include oColorsFor(link-title, text);
@@ -50,12 +59,14 @@
 	}
 }
 
+/// Base standfirst text styles
 @mixin oCardStandfirst {
 	@include oColorsFor(o-card-excerpt, text);
 	@include oTypographySans(s);
 	margin: $o-card-spacing-unit/2 0 0;
 }
 
+/// Card image styles, also applies top and bottom modifiers
 @mixin oCardImage {
 	display: block;
 	flex-shrink: 0;
@@ -82,6 +93,7 @@
 	}
 }
 
+/// Base related content list styles
 @mixin oCardRelatedContent {
 	@include oColorsFor(o-card-list, text);
 	list-style: none inside;
@@ -91,6 +103,7 @@
 	order: 6;
 }
 
+/// Base related content item styles, including link styles
 @mixin oCardRelatedContentItem {
 	@include oTypographySans(s);
 	@include oColorsFor(link-title, text);
