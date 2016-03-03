@@ -11,6 +11,7 @@
 	.o-card__standfirst,
 	.o-card__timestamp {
 		flex-basis: 100%;
+		flex-shrink: 0;
 	}
 
 	.o-card__image {
