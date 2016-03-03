@@ -1,3 +1,7 @@
+@mixin oCardThemeStandAlone {
+	border-bottom: 1px solid oColorsGetColorFor(o-card-shadow, shadow);
+}
+
 @mixin oCardThemeLandscape {
 	flex-direction: row;
 	flex-wrap: wrap;

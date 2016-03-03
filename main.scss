@@ -3,6 +3,9 @@
 @import "o-typography/main";
 // @import "o-ft-icons/main";
 
+$o-hoverable-if-hover-enabled: '';
+@import 'o-hoverable/main';
+
 @import "src/scss/color-use-cases";
 @import "src/scss/variables";
 
@@ -15,6 +18,10 @@
 
 		&--landscape {
 			@include oCardThemeLandscape;
+		}
+
+		&--stand-alone {
+			@include oCardThemeStandAlone;
 		}
 	}
 
