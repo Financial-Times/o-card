@@ -30,7 +30,7 @@
             }
         },
         {
-            "name": "image-vertical-standout",
+            "name": "standout",
             "expanded": false,
             "description": "Card with vertically aligned image",
             "template": "demos/src/main.mustache",
