@@ -10,8 +10,8 @@
     },
     "demosDefaults": {
         "sass": "demos/src/main.scss",
-        "js": "demos/src/main.js",
-        "documentClasses": ""
+        "documentClasses": "",
+        "dependencies": "o-date@^2.2.1"
     },
     "demos": [
         {
