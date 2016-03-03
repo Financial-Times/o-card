@@ -69,8 +69,13 @@
 /// Card image styles, also applies top and bottom modifiers
 @mixin oCardImage {
 	display: block;
-	flex-shrink: 0;
 	margin: 0 0 $o-card-spacing-unit;
+
+	// To prevent the content of the flex-item breaking out of the container in Firefox
+	// https://bugzilla.mozilla.org/show_bug.cgi?id=1108514#c2
+	min-width: 0;
+	flex-shrink: 0;
+
 	// Ensure image is at the bottom of the card,
 	// by default all elements have order: 0
 	order: 1;

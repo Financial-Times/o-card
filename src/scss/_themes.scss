@@ -30,9 +30,6 @@
 
 	.o-card__image--left {
 		flex-basis: 100px;
-		// To prevent the content of the flex-item breaking out of the container in Firefox
-		// https://bugzilla.mozilla.org/show_bug.cgi?id=1108514#c2
-		min-width: 0;
 		order: 2;
 		margin-right: 5%;
 	}
