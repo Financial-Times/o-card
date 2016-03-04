@@ -42,12 +42,15 @@
 
 	&--#{$modifier} &__image--left {
 		flex-basis: 100px;
+		// Move the image to appear second in the card after the tag
 		order: 2;
 		margin-right: 5%;
 	}
 
 	&--#{$modifier} &__image--right {
 		flex-basis: 50%;
+		// Move the image to appear third after the tag and heading
+		// (comes after heading in source order so can have the same order value)
 		order: 3;
 	}
 
@@ -57,6 +60,8 @@
 		// Will grow to fill the remaining space when an image is left aligned and 100px
 		// or 100% of the space if there is no image
 		flex-grow: 1;
+		// Order third so it will appear after a left aligned image and
+		// before a right aligned image (see above)
 		order: 3;
 		padding-right: $o-card-spacing-unit;
 	}
