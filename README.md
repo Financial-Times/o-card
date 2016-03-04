@@ -66,7 +66,7 @@ The image can be aligned in four ways, depending on the layout of the card. The 
 In a landscape card the image can be aligned `left` or `right`. In a landscape card, the heading will appear in the same row as the image, and if used a standfirst will appear below.
 
 * left: image will appear on the left at `100px` width.
-* right: image will appear on the right of the card at 50% width of the card.
+* right: image will appear on the right of the card at `50%` width of the card.
 
 ----
 

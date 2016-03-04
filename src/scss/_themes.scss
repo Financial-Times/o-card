@@ -5,7 +5,7 @@
 
 /// Stand alone card theme styles
 ///
-/// @param {String} $modifier - the modifier classname you want to use
+/// @param {String} $modifier [stand-alone] - the modifier classname you want to use
 @mixin oCardThemeStandAlone($modifier: 'stand-alone') {
 	&--#{$modifier} {
 		border-bottom: 1px solid oColorsGetColorFor(o-card-shadow, shadow);
@@ -14,7 +14,7 @@
 
 /// Stand out card theme styles
 ///
-/// @param {String} $modifier - the modifier classname you want to use
+/// @param {String} $modifier [standout] - the modifier classname you want to use
 @mixin oCardThemeStandOut($modifier: 'standout') {
 	&--#{$modifier} {
 		@include oColorsFor(o-card-standout, background);
@@ -25,7 +25,7 @@
 /// modifies block elements tag, standfirst, timestamp, image, and heading
 /// to adapt to a landscape/horizontal layout
 ///
-/// @param {String} $modifier - the modifier classname you want to use
+/// @param {String} $modifier [landscape] - the modifier classname you want to use
 @mixin oCardThemeLandscape($modifier: 'landscape') {
 	&--#{$modifier} {
 		flex-direction: row;
