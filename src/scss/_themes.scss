@@ -4,42 +4,54 @@
 ////
 
 /// Stand alone card theme styles
-@mixin oCardThemeStandAlone {
-	border-bottom: 1px solid oColorsGetColorFor(o-card-shadow, shadow);
+///
+/// @param {String} $modifier - the modifier classname you want to use
+@mixin oCardThemeStandAlone($modifier: 'stand-alone') {
+	&--#{$modifier} {
+		border-bottom: 1px solid oColorsGetColorFor(o-card-shadow, shadow);
+	}
 }
 
 /// Stand out card theme styles
-@mixin oCardThemeStandOut {
-	@include oColorsFor(o-card-standout, background);
+///
+/// @param {String} $modifier - the modifier classname you want to use
+@mixin oCardThemeStandOut($modifier: 'standout') {
+	&--#{$modifier} {
+		@include oColorsFor(o-card-standout, background);
+	}
 }
 
 /// Landscape card themes styles
 /// modifies block elements tag, standfirst, timestamp, image, and heading
 /// to adapt to a landscape/horizontal layout
-@mixin oCardThemeLandscape {
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
+///
+/// @param {String} $modifier - the modifier classname you want to use
+@mixin oCardThemeLandscape($modifier: 'landscape') {
+	&--#{$modifier} {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 
-	.o-card__tag,
-	.o-card__standfirst,
-	.o-card__timestamp {
+	&--#{$modifier} &__tag,
+	&--#{$modifier} &__standfirst,
+	&--#{$modifier} &__timestamp {
 		flex-basis: 100%;
 		flex-shrink: 0;
 	}
 
-	.o-card__image--left {
+	&--#{$modifier} &__image--left {
 		flex-basis: 100px;
 		order: 2;
 		margin-right: 5%;
 	}
 
-	.o-card__image--right {
+	&--#{$modifier} &__image--right {
 		flex-basis: 50%;
 		order: 3;
 	}
 
-	.o-card__heading {
+	&--#{$modifier} &__heading {
 		// 50% so the heading will fit against an image which is right aligned
 		flex-basis: 45%;
 		// Will grow to fill the remaining space when an image is left aligned and 100px
@@ -49,11 +61,11 @@
 		padding-right: $o-card-spacing-unit;
 	}
 
-	.o-card__standfirst {
+	&--#{$modifier} &__standfirst {
 		order: 4;
 	}
 
-	.o-card__timestamp {
+	&--#{$modifier} &__timestamp {
 		clear: both;
 		width: 100%;
 		order: 5;

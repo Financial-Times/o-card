@@ -13,18 +13,9 @@ $o-hoverable-if-hover-enabled: '';
 @if $o-card-is-silent == false {
 	.o-card {
 		@include oCard;
-
-		&--landscape {
-			@include oCardThemeLandscape;
-		}
-
-		&--stand-alone {
-			@include oCardThemeStandAlone;
-		}
-
-		&--standout {
-			@include oCardThemeStandOut;
-		}
+		@include oCardThemeLandscape;
+		@include oCardThemeStandAlone;
+		@include oCardThemeStandOut;
 	}
 
 	.o-card__tag {
