@@ -17,8 +17,8 @@ $o-hoverable-if-hover-enabled: '';
 		@include oCardThemeStandalone;
 		@include oCardThemeStandout;
 
-		@include oCardThemeLandscapeImage('landscape', 'left');
-		@include oCardThemeLandscapeImage('landscape', 'right');
+		@include oCardThemeLandscapeImage($image-alignment: 'left');
+		@include oCardThemeLandscapeImage($image-alignment: 'right');
 	}
 
 	.o-card__tag {
