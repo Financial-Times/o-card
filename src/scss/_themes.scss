@@ -33,12 +33,6 @@
 		justify-content: space-between;
 	}
 
-	&--#{$modifier} &__tag,
-	&--#{$modifier} &__standfirst,
-	&--#{$modifier} &__timestamp {
-		flex: 0 0 100%;
-	}
-
 	&--#{$modifier} &__heading {
 		width: 100%;
 		// Order third so it will appear after a left aligned image and
@@ -46,18 +40,25 @@
 		order: 3;
 	}
 
+	&--#{$modifier} &__tag,
+	&--#{$modifier} &__standfirst,
+	&--#{$modifier} &__timestamp {
+		clear: left;
+		width: 100%;
+		flex: 0 0 100%;
+	}
+
 	&--#{$modifier} &__standfirst {
 		order: 4;
 	}
 
 	&--#{$modifier} &__timestamp {
-		width: 100%;
 		order: 5;
 	}
 }
 
 /// Landscape card with image styles
-/// modifies heading and image styles to adapt to a landscape/horizontal layout
+/// modifies card, heading, and image styles to adapt to a landscape/horizontal layout
 ///
 /// @param {String} $modifier [landscape] - the modifier classname you want to use
 /// @param {String} $image-alignment [left] - alignment of an image in the landscape card
@@ -84,11 +85,14 @@
 			$_o-card-image-and-spacing: $o-card-image-width-left-align + $o-card-spacing-unit;
 			// Float and width are for IE9 where flexbox is not supported
 			float: left;
+			// Basic size for a heading <IE9
+			width: 60%;
+			// More accurate size for a heading in IE9
 			width: calc(95% - #{$_o-card-image-and-spacing});
-			// 45% so the heading will fit against an image which is right aligned
+			// Heading should be at least 50% width, otherwise it will flow beneath the image
 			// Will grow to fill the remaining space when an image is left aligned and 100px
 			// or 100% of the space if there is no image
-			flex: 1 1 45%;
+			flex: 1 1 50%;
 			padding-right: $o-card-spacing-unit;
 		}
 
