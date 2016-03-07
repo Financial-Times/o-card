@@ -5,16 +5,7 @@ Origami component for a card.
 
 ## Browser support
 
-|  Browsers  | Primary Experience | Core Experience |
-|:----------:|:------------------:|:---------------:|
-|   Chrome   |        35+         |       35+       |
-|   Firefox  |        30+         |       30+       |
-|   Safari   |        7+          |       7+        |
-|   IE       |        8+          |       8+        |
-
-Known issues:
-
-* Image alignment is not supported in <IE9, the image will default to being full width of the card and aligned above the timestamp
+Works as expected in all browsers that require "enhanced" and "core" support.
 
 ## Usage
 
@@ -48,8 +39,8 @@ Each element class has a `@mixin` as well (e.g. `oCardTag`), however when using 
 
 There are three themes that can modify a card:
 
-* stand alone - adds a highlight to the bottom of the card (to be used if not grouped on the same background)
-* stand out - adds a darker background to the card
+* standalone - adds a highlight to the bottom of the card (to be used if not grouped on the same background)
+* standout - adds a darker background to the card
 * landscape - used for a wider card and allows for left and right [image alignments](#image-alignment).
 
 ## Image alignment
@@ -59,14 +50,14 @@ The image can be aligned in four ways, depending on the layout of the card. The 
 ### Portrait card
 
 * top: image will be the first element in the card
-* bottom: image will be the last element in the card, unless the card has related content in which it will be above the related content.
+* bottom: image will be the last element in the card, unless the card has related content, in which case it will be above the related content.
 
 ### Landscape card
 
-In a landscape card the image can be aligned `left` or `right`. In a landscape card, the heading will appear in the same row as the image, and if used a standfirst will appear below.
+In a landscape card the image can be aligned `left` or `right`. In a landscape card, the heading will appear in the same row as the image and if used, a standfirst will appear below.
 
-* left: image will appear on the left at `100px` width.
-* right: image will appear on the right of the card at `50%` width of the card.
+* left: image will appear on the left at `100px` width. Configured by `$o-card-image-width-left-align`.
+* right: image will appear on the right of the card aligned with the top, at `50%` width of the card.
 
 ----
 

@@ -6,7 +6,7 @@
 /// Stand alone card theme styles
 ///
 /// @param {String} $modifier [stand-alone] - the modifier classname you want to use
-@mixin oCardThemeStandAlone($modifier: 'stand-alone') {
+@mixin oCardThemeStandalone($modifier: 'standalone') {
 	&--#{$modifier} {
 		border-bottom: 1px solid oColorsGetColorFor(o-card-shadow, shadow);
 	}
@@ -15,7 +15,7 @@
 /// Stand out card theme styles
 ///
 /// @param {String} $modifier [standout] - the modifier classname you want to use
-@mixin oCardThemeStandOut($modifier: 'standout') {
+@mixin oCardThemeStandout($modifier: 'standout') {
 	&--#{$modifier} {
 		@include oColorsFor(o-card-standout, background);
 	}
