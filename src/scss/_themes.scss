@@ -21,12 +21,12 @@
 	}
 }
 
-/// Landscape card themes styles
+/// Landscape card theme base styles
 /// modifies block elements tag, standfirst, timestamp, image, and heading
 /// to adapt to a landscape/horizontal layout
 ///
 /// @param {String} $modifier [landscape] - the modifier classname you want to use
-@mixin oCardThemeLandscape($modifier: 'landscape') {
+@mixin oCardThemeLandscapeBase($modifier: 'landscape') {
 	&--#{$modifier} {
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -36,34 +36,14 @@
 	&--#{$modifier} &__tag,
 	&--#{$modifier} &__standfirst,
 	&--#{$modifier} &__timestamp {
-		flex-basis: 100%;
-		flex-shrink: 0;
-	}
-
-	&--#{$modifier} &__image--left {
-		flex-basis: 100px;
-		// Move the image to appear second in the card after the tag
-		order: 2;
-		margin-right: 5%;
-	}
-
-	&--#{$modifier} &__image--right {
-		flex-basis: 50%;
-		// Move the image to appear third after the tag and heading
-		// (comes after heading in source order so can have the same order value)
-		order: 3;
+		flex: 0 0 100%;
 	}
 
 	&--#{$modifier} &__heading {
-		// 50% so the heading will fit against an image which is right aligned
-		flex-basis: 45%;
-		// Will grow to fill the remaining space when an image is left aligned and 100px
-		// or 100% of the space if there is no image
-		flex-grow: 1;
+		width: 100%;
 		// Order third so it will appear after a left aligned image and
 		// before a right aligned image (see above)
 		order: 3;
-		padding-right: $o-card-spacing-unit;
 	}
 
 	&--#{$modifier} &__standfirst {
@@ -71,8 +51,46 @@
 	}
 
 	&--#{$modifier} &__timestamp {
-		clear: both;
 		width: 100%;
 		order: 5;
+	}
+}
+
+/// Landscape card with image styles
+/// modifies heading and image styles to adapt to a landscape/horizontal layout
+///
+/// @param {String} $modifier [landscape] - the modifier classname you want to use
+/// @param {String} $image-alignment [left] - alignment of an image in the landscape card
+@mixin oCardThemeLandscapeImage($modifier: 'landscape', $image-alignment: 'left') {
+
+	@if $image-alignment == 'right' {
+
+		&--#{$modifier}#{&}--image-right {
+			position: relative;
+		}
+
+		&--#{$modifier}#{&}--image-right &__heading {
+			width: 45%;
+			padding-right: $o-card-spacing-unit;
+		}
+
+		&--#{$modifier} &__image--right {
+			@include oCardImageRight;
+		}
+
+	} @else {
+
+		&--#{$modifier}#{&}--image-left &__heading {
+			// 45% so the heading will fit against an image which is right aligned
+			// Will grow to fill the remaining space when an image is left aligned and 100px
+			// or 100% of the space if there is no image
+			flex: 1 1 45%;
+			padding-right: $o-card-spacing-unit;
+		}
+
+		&--#{$modifier} &__image--left {
+			@include oCardImageLeft;
+		}
+
 	}
 }

@@ -76,18 +76,18 @@
 	min-width: 0;
 	flex-shrink: 0;
 
-	// Ensure image is at the bottom of the card,
-	// by default all elements have order: 0
+	// Default image to the bottom of the card,
+	// based on default all elements have order: 0
 	order: 1;
 
 	&--top {
-		order: -1;
+		@include oCardImageTop;
 	}
 
-	// Make sure image goes to the bottom of the card
+	// Ensure image goes to the bottom of the card
 	// set to '6' in case anyone re-orders other card elements
 	&--bottom {
-		order: 6;
+		@include oCardImageBottom;
 	}
 
 	img {
@@ -130,4 +130,32 @@
 	#{$o-hoverable-if-hover-enabled} a:hover {
 		border-bottom: 1px dotted;
 	}
+}
+
+/// Styles for a left aligned image
+@mixin oCardImageLeft {
+	float: left;
+	width: 100px;
+	// flex-basis: 100px;
+	// Move the image to appear second in the card after the tag
+	order: 2;
+	margin-right: 5%;
+}
+
+/// Styles for a right aligned image
+@mixin oCardImageRight {
+	position: absolute;
+	top: $o-card-spacing-unit;
+	right: $o-card-spacing-unit;
+	width: 50%;
+}
+
+/// Styles to force an image to the top of the card
+@mixin oCardImageTop {
+	order: -1;
+}
+
+/// Styles to force an image to the bottom of the card
+@mixin oCardImageBottom {
+	order: 6;
 }
