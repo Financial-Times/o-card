@@ -136,6 +136,7 @@
 @mixin oCardImageLeft {
 	float: left;
 	width: $o-card-image-width-left-align;
+	max-width: 30%;
 	flex-basis: $o-card-image-width-left-align;
 	// Move the image to appear second in the card after the tag
 	order: 2;
