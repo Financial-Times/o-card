@@ -90,12 +90,13 @@
 
 		// e.g. .o-card--landscape.o-card--image-left .o-card__heading
 		&--#{$modifier}#{&}--image-left &__heading {
+			// Combine the image size and spacing unit for use in calc()
 			$_full-image-size: $o-card-image-width + $o-card-spacing-unit;
-			// Float and width are for IE9 where flexbox is not supported
+			// Float and width are for <=IE9 where flexbox is not supported
 			float: left;
 			// Basic size for a heading <IE9
 			width: 60%;
-			// More accurate size for a heading in IE9
+			// More accurate size for a heading in IE9, uses 95% as the image has a 5% margin-right
 			width: calc(95% - #{$_full-image-size});
 			// Heading should be at least 50% width, otherwise it will flow beneath the image
 			// Will grow to fill the remaining space when an image is left aligned and 100px
