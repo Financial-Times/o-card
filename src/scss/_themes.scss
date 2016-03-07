@@ -7,6 +7,7 @@
 ///
 /// @param {String} $modifier [stand-alone] - the modifier classname you want to use
 @mixin oCardThemeStandalone($modifier: 'standalone') {
+	// e.g. .o-card--standalone
 	&--#{$modifier} {
 		border-bottom: 1px solid oColorsGetColorFor(o-card-shadow, shadow);
 	}
@@ -16,6 +17,7 @@
 ///
 /// @param {String} $modifier [standout] - the modifier classname you want to use
 @mixin oCardThemeStandout($modifier: 'standout') {
+	// e.g. .o-card--standout
 	&--#{$modifier} {
 		@include oColorsFor(o-card-standout, background);
 	}
@@ -27,12 +29,14 @@
 ///
 /// @param {String} $modifier [landscape] - the modifier classname you want to use
 @mixin oCardThemeLandscapeBase($modifier: 'landscape') {
+	// e.g. .o-card--landscape
 	&--#{$modifier} {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
+	// e.g. .o-card--landscape .o-card__heading
 	&--#{$modifier} &__heading {
 		width: 100%;
 		// Order third so it will appear after a left aligned image and
@@ -66,29 +70,33 @@
 
 	@if $image-alignment == 'right' {
 
+		// e.g. .o-card--landscape.o-card--image-right
 		&--#{$modifier}#{&}--image-right {
 			position: relative;
 		}
 
+		// e.g. .o-card--landscape.o-card--image-right .o-card__heading
 		&--#{$modifier}#{&}--image-right &__heading {
 			width: 45%;
 			padding-right: $o-card-spacing-unit;
 		}
 
+		// e.g. .o-card--landscape.o-card--image-right .o-card__image--right
 		&--#{$modifier} &__image--right {
 			@include oCardImageRight;
 		}
 
 	} @else {
 
+		// e.g. .o-card--landscape.o-card--image-left .o-card__heading
 		&--#{$modifier}#{&}--image-left &__heading {
-			$_o-card-image-and-spacing: $o-card-image-width-left-align + $o-card-spacing-unit;
+			$_full-image-size: $o-card-image-width + $o-card-spacing-unit;
 			// Float and width are for IE9 where flexbox is not supported
 			float: left;
 			// Basic size for a heading <IE9
 			width: 60%;
 			// More accurate size for a heading in IE9
-			width: calc(95% - #{$_o-card-image-and-spacing});
+			width: calc(95% - #{$_full-image-size});
 			// Heading should be at least 50% width, otherwise it will flow beneath the image
 			// Will grow to fill the remaining space when an image is left aligned and 100px
 			// or 100% of the space if there is no image
@@ -96,6 +104,7 @@
 			padding-right: $o-card-spacing-unit;
 		}
 
+		// e.g. .o-card--landscape .o-card__image--left
 		&--#{$modifier} &__image--left {
 			@include oCardImageLeft;
 		}

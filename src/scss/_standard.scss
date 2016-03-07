@@ -135,9 +135,10 @@
 /// Styles for a left aligned image
 @mixin oCardImageLeft {
 	float: left;
-	width: $o-card-image-width-left-align;
+	width: $o-card-image-width;
+	// Max width in case the container is resized enough to cause the layout to break
 	max-width: 30%;
-	flex-basis: $o-card-image-width-left-align;
+	flex-basis: $o-card-image-width;
 	// Move the image to appear second in the card after the tag
 	order: 2;
 	margin-right: 5%;
