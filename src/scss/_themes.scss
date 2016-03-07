@@ -81,6 +81,10 @@
 	} @else {
 
 		&--#{$modifier}#{&}--image-left &__heading {
+			$_o-card-image-and-spacing: $o-card-image-width-left-align + $o-card-spacing-unit;
+			// Float and width are for IE9 where flexbox is not supported
+			float: left;
+			width: calc(95% - #{$_o-card-image-and-spacing});
 			// 45% so the heading will fit against an image which is right aligned
 			// Will grow to fill the remaining space when an image is left aligned and 100px
 			// or 100% of the space if there is no image
