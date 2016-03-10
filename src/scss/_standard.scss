@@ -63,7 +63,7 @@
 @mixin oCardStandfirst {
 	@include oColorsFor(o-card-excerpt, text);
 	@include oTypographySans(s);
-	margin: $o-card-spacing-unit/2 0 0;
+	margin: 0;
 }
 
 /// Card image styles, also applies top and bottom modifiers
@@ -116,8 +116,6 @@
 
 	&:before {
 		content: '>';
-		position: relative;
-		top: -2px;
 		display: inline-block;
 		margin-right: $o-card-spacing-unit;
 	}
