@@ -1,27 +1,54 @@
-@import "o-grid/main";
 @import "o-colors/main";
+@import "o-fonts/main";
+@import "o-typography/main";
+
+$o-hoverable-if-hover-enabled: '';
+@import 'o-hoverable/main';
 
 @import "src/scss/color-use-cases";
 @import "src/scss/variables";
-@import "src/scss/mixins";
+
+@import 'src/scss/themes';
 @import "src/scss/standard";
 
 @if $o-card-is-silent == false {
+	@include oFontsIncludeAll();
+
 	.o-card {
 		@include oCard;
+		@include oCardThemeLandscapeBase;
+		@include oCardThemeStandalone;
+		@include oCardThemeStandout;
+
+		@include oCardThemeLandscapeImage($image-alignment: 'left');
+		@include oCardThemeLandscapeImage($image-alignment: 'right');
 	}
 
-	.o-card__container {
-		@include oCardContainer;
+	.o-card__tag {
+		@include oCardTag;
+	}
+
+	.o-card__heading {
+		@include oCardHeading;
+	}
+
+	.o-card__standfirst {
+		@include oCardStandfirst;
+	}
+
+	.o-card__timestamp {
+		@include oCardTimestamp;
 	}
 
 	.o-card__image {
-		&--vertical {
-			@include oCardImage(vertical);
-		}
+		@include oCardImage;
+	}
 
-		&--horizontal {
-			@include oCardImage(horizontal);
-		}
+	.o-card__related-content {
+		@include oCardRelatedContent;
+	}
+
+	.o-card__related-content-item {
+		@include oCardRelatedContentItem;
 	}
 }

@@ -1,10 +1,15 @@
 $o-card-is-silent: false;
 @import '../../main';
 
-.demo-container--vertical {
+.demo-container {
+	padding: 20px;
 	width: 200px;
 }
 
-.demo-container--horizontal {
-	height: 200px;
+.demo-container--large {
+	width: 300px;
+}
+
+.demo-container--landscape {
+	width: 350px;
 }
