@@ -23,17 +23,29 @@
 	}
 }
 
+/// Portrait card theme styles
+///
+/// @param {String} $modifier [portrait] - the modifier classname you want to use
+@mixin oCardThemePortrait($modifier: 'portrait') {
+
+}
+
 /// Landscape card theme base styles
 /// modifies block elements tag, standfirst, timestamp, image, and heading
 /// to adapt to a landscape/horizontal layout
 ///
 /// @param {String} $modifier [landscape] - the modifier classname you want to use
-@mixin oCardThemeLandscapeBase($modifier: 'landscape') {
+@mixin oCardThemeLandscape($modifier: 'landscape') {
 	// e.g. .o-card--landscape
 	&--#{$modifier} {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
+	}
+
+	// e.g. .o-card--landscape.o-card--image-right
+	&--#{$modifier}#{&}--image-right {
+		position: relative;
 	}
 
 	// e.g. .o-card--landscape .o-card__heading
@@ -42,6 +54,14 @@
 		// Order third so it will appear after a left aligned image and
 		// before a right aligned image (see above)
 		order: 3;
+	}
+
+	&--image-right &__heading {
+		@include oCardThemeLandscapeHeader('left');
+	}
+
+	&--image-left &__heading {
+		@include oCardThemeLandscapeHeader('right');
 	}
 
 	&--#{$modifier} &__tag,
@@ -61,54 +81,26 @@
 	}
 }
 
-/// Landscape card with image styles
-/// modifies card, heading, and image styles to adapt to a landscape/horizontal layout
+/// Modifies header styles when on a landscape card
 ///
-/// @param {String} $modifier [landscape] - the modifier classname you want to use
-/// @param {String} $image-alignment [left] - alignment of an image in the landscape card
-@mixin oCardThemeLandscapeImage($modifier: 'landscape', $image-alignment: 'left') {
-
-	@if $image-alignment == 'right' {
-
-		// e.g. .o-card--landscape.o-card--image-right
-		&--#{$modifier}#{&}--image-right {
-			position: relative;
-		}
-
-		// e.g. .o-card--landscape.o-card--image-right .o-card__heading
-		&--#{$modifier}#{&}--image-right &__heading {
-			width: 45%;
-			padding-right: $o-card-spacing-unit;
-		}
-
-		// e.g. .o-card--landscape.o-card--image-right .o-card__image--right
-		&--#{$modifier} &__image--right {
-			@include oCardImageRight;
-		}
-
+/// @param {String} $alignment [left] - the alignment of the header on the card
+@mixin oCardThemeLandscapeHeader($alignment: 'left') {
+	@if $alignment == 'left' {
+		width: 45%;
+		padding-right: $o-card-spacing-unit;
 	} @else {
-
-		// e.g. .o-card--landscape.o-card--image-left .o-card__heading
-		&--#{$modifier}#{&}--image-left &__heading {
-			// Combine the image size and spacing unit for use in calc()
-			$_full-image-size: $o-card-image-width + $o-card-spacing-unit;
-			// Float and width are for <=IE9 where flexbox is not supported
-			float: left;
-			// Basic size for a heading <IE9
-			width: 60%;
-			// More accurate size for a heading in IE9, uses 95% as the image has a 5% margin-right
-			width: calc(95% - #{$_full-image-size});
-			// Heading should be at least 50% width, otherwise it will flow beneath the image
-			// Will grow to fill the remaining space when an image is left aligned and 100px
-			// or 100% of the space if there is no image
-			flex: 1 1 50%;
-			padding-right: $o-card-spacing-unit;
-		}
-
-		// e.g. .o-card--landscape .o-card__image--left
-		&--#{$modifier} &__image--left {
-			@include oCardImageLeft;
-		}
-
+		// Combine the image size and spacing unit for use in calc()
+		$_full-image-size: $o-card-image-width + $o-card-spacing-unit;
+		// Float and width are for <=IE9 where flexbox is not supported
+		float: left;
+		// Basic size for a heading <IE9
+		width: 60%;
+		// More accurate size for a heading in IE9, uses 95% as the image has a 5% margin-right
+		width: calc(95% - #{$_full-image-size});
+		// Heading should be at least 50% width, otherwise it will flow beneath the image
+		// Will grow to fill the remaining space when an image is left aligned and 100px
+		// or 100% of the space if there is no image
+		flex: 1 1 50%;
+		padding-right: $o-card-spacing-unit;
 	}
 }

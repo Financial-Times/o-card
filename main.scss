@@ -16,12 +16,9 @@ $o-hoverable-if-hover-enabled: '';
 
 	.o-card {
 		@include oCard;
-		@include oCardThemeLandscapeBase;
+		@include oCardThemeLandscape;
 		@include oCardThemeStandalone;
 		@include oCardThemeStandout;
-
-		@include oCardThemeLandscapeImage($image-alignment: 'left');
-		@include oCardThemeLandscapeImage($image-alignment: 'right');
 	}
 
 	.o-card__tag {
@@ -42,6 +39,14 @@ $o-hoverable-if-hover-enabled: '';
 
 	.o-card__image {
 		@include oCardImage;
+
+		&--right {
+			@include oCardImageRight;
+		}
+
+		&--left {
+			@include oCardImageLeft;
+		}
 	}
 
 	.o-card__related-content {
