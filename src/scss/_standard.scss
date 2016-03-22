@@ -84,14 +84,12 @@
 		@include oCardImageTop;
 	}
 
-	// Ensure image goes to the bottom of the card
-	// set to '6' in case anyone re-orders other card elements
-	&--bottom {
-		@include oCardImageBottom;
-	}
-
 	&--right {
 		@include oCardImageRight;
+	}
+
+	&--bottom {
+		@include oCardImageBottom;
 	}
 
 	&--left {
@@ -138,6 +136,32 @@
 	}
 }
 
+/// Styles for a right aligned header
+@mixin oCardHeaderRight {
+	// Combine the image size and spacing unit for use in calc()
+	$_full-image-size: $o-card-image-width + $o-card-spacing-unit;
+	// Float and width are for <=IE9 where flexbox is not supported
+	float: left;
+	// Basic size for a heading <IE9
+	width: 60%;
+	// More accurate size for a heading in IE9, uses 95% as the image has a 5% margin-right
+	width: calc(95% - #{$_full-image-size});
+	// Heading should be at least 50% width, otherwise it will flow beneath the image
+	// Will grow to fill the remaining space when an image is left aligned and 100px
+	// or 100% of the space if there is no image
+	flex: 1 1 50%;
+	order: 3;
+	padding-right: $o-card-spacing-unit;
+}
+
+/// Styles for a left aligned header
+@mixin oCardHeaderLeft {
+	order: 3;
+	width: 45%;
+	padding-right: $o-card-spacing-unit;
+}
+
+
 /// Styles for a left aligned image
 @mixin oCardImageLeft {
 	float: left;
@@ -165,5 +189,7 @@
 
 /// Styles to force an image to the bottom of the card
 @mixin oCardImageBottom {
+	// Ensure image goes to the bottom of the card
+	// set to '6' in case anyone re-orders other card elements
 	order: 6;
 }

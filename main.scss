@@ -17,6 +17,7 @@ $o-hoverable-if-hover-enabled: '';
 	.o-card {
 		@include oCard;
 		@include oCardThemeLandscape;
+		@include oCardThemePortrait;
 		@include oCardThemeStandalone;
 		@include oCardThemeStandout;
 	}

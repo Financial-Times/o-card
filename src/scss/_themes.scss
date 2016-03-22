@@ -28,6 +28,25 @@
 /// @param {String} $modifier [portrait] - the modifier classname you want to use
 @mixin oCardThemePortrait($modifier: 'portrait') {
 
+	&--#{$modifier} {
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+	}
+
+	// Normalise the styles for an image in a portrait card
+	&--#{$modifier} &__image {
+		position: static;
+		float: none;
+		width: 100%;
+	}
+
+	// Normalise the styles for a heading in a portrait card
+	&--#{$modifier} &__heading {
+		float: none;
+		width: 100%;
+	}
+
 }
 
 /// Landscape card theme base styles
@@ -48,20 +67,12 @@
 		position: relative;
 	}
 
-	// e.g. .o-card--landscape .o-card__heading
-	&--#{$modifier} &__heading {
-		width: 100%;
-		// Order third so it will appear after a left aligned image and
-		// before a right aligned image (see above)
-		order: 3;
-	}
-
 	&--image-right &__heading {
-		@include oCardThemeLandscapeHeader('left');
+		@include oCardHeaderLeft;
 	}
 
 	&--image-left &__heading {
-		@include oCardThemeLandscapeHeader('right');
+		@include oCardHeaderRight;
 	}
 
 	&--#{$modifier} &__tag,
@@ -78,29 +89,5 @@
 
 	&--#{$modifier} &__timestamp {
 		order: 5;
-	}
-}
-
-/// Modifies header styles when on a landscape card
-///
-/// @param {String} $alignment [left] - the alignment of the header on the card
-@mixin oCardThemeLandscapeHeader($alignment: 'left') {
-	@if $alignment == 'left' {
-		width: 45%;
-		padding-right: $o-card-spacing-unit;
-	} @else {
-		// Combine the image size and spacing unit for use in calc()
-		$_full-image-size: $o-card-image-width + $o-card-spacing-unit;
-		// Float and width are for <=IE9 where flexbox is not supported
-		float: left;
-		// Basic size for a heading <IE9
-		width: 60%;
-		// More accurate size for a heading in IE9, uses 95% as the image has a 5% margin-right
-		width: calc(95% - #{$_full-image-size});
-		// Heading should be at least 50% width, otherwise it will flow beneath the image
-		// Will grow to fill the remaining space when an image is left aligned and 100px
-		// or 100% of the space if there is no image
-		flex: 1 1 50%;
-		padding-right: $o-card-spacing-unit;
 	}
 }
