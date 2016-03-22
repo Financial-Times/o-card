@@ -90,6 +90,14 @@
 		@include oCardImageBottom;
 	}
 
+	&--right {
+		@include oCardImageRight;
+	}
+
+	&--left {
+		@include oCardImageLeft;
+	}
+
 	img {
 		display: block;
 		max-width: 100%;

@@ -39,14 +39,6 @@ $o-hoverable-if-hover-enabled: '';
 
 	.o-card__image {
 		@include oCardImage;
-
-		&--right {
-			@include oCardImageRight;
-		}
-
-		&--left {
-			@include oCardImageLeft;
-		}
 	}
 
 	.o-card__related-content {
