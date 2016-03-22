@@ -4,45 +4,39 @@
 ////
 
 /// Stand alone card theme styles
-///
-/// @param {String} $modifier [stand-alone] - the modifier classname you want to use
-@mixin oCardThemeStandalone($modifier: 'standalone') {
+@mixin oCardThemeStandalone {
 	// e.g. .o-card--standalone
-	&--#{$modifier} {
+	&--standalone {
 		border-bottom: 1px solid oColorsGetColorFor(o-card-shadow, shadow);
 	}
 }
 
 /// Stand out card theme styles
-///
-/// @param {String} $modifier [standout] - the modifier classname you want to use
-@mixin oCardThemeStandout($modifier: 'standout') {
+@mixin oCardThemeStandout {
 	// e.g. .o-card--standout
-	&--#{$modifier} {
+	&--standout {
 		@include oColorsFor(o-card-standout, background);
 	}
 }
 
 /// Portrait card theme styles
-///
-/// @param {String} $modifier [portrait] - the modifier classname you want to use
-@mixin oCardThemePortrait($modifier: 'portrait') {
+@mixin oCardThemePortrait {
 
-	&--#{$modifier} {
+	&--portrait {
 		flex-direction: column;
 		flex-wrap: nowrap;
 		justify-content: flex-start;
 	}
 
 	// Normalise the styles for an image in a portrait card
-	&--#{$modifier} &__image {
+	&--portrait &__image {
 		position: static;
 		float: none;
 		width: 100%;
 	}
 
 	// Normalise the styles for a heading in a portrait card
-	&--#{$modifier} &__heading {
+	&--portrait &__heading {
 		float: none;
 		width: 100%;
 	}
@@ -52,42 +46,37 @@
 /// Landscape card theme base styles
 /// modifies block elements tag, standfirst, timestamp, image, and heading
 /// to adapt to a landscape/horizontal layout
-///
-/// @param {String} $modifier [landscape] - the modifier classname you want to use
-@mixin oCardThemeLandscape($modifier: 'landscape') {
+@mixin oCardThemeLandscape {
 	// e.g. .o-card--landscape
-	&--#{$modifier} {
+	&--landscape {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
-	// e.g. .o-card--landscape.o-card--image-right
-	&--#{$modifier}#{&}--image-right {
-		position: relative;
+	&--landscape &__tag,
+	&--landscape &__standfirst,
+	&--landscape &__timestamp {
+		clear: left;
+		width: 100%;
+		flex: 0 0 100%;
 	}
 
+	&--landscape &__standfirst {
+		order: 4;
+	}
+
+	&--landscape &__timestamp {
+		order: 5;
+	}
+
+	// The headings should only be aligned based on the
+	// image alignment
 	&--image-right &__heading {
 		@include oCardHeaderLeft;
 	}
 
 	&--image-left &__heading {
 		@include oCardHeaderRight;
-	}
-
-	&--#{$modifier} &__tag,
-	&--#{$modifier} &__standfirst,
-	&--#{$modifier} &__timestamp {
-		clear: left;
-		width: 100%;
-		flex: 0 0 100%;
-	}
-
-	&--#{$modifier} &__standfirst {
-		order: 4;
-	}
-
-	&--#{$modifier} &__timestamp {
-		order: 5;
 	}
 }
