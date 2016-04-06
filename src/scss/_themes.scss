@@ -15,14 +15,14 @@
 	justify-content: flex-start;
 
 	// Normalise the styles for an image in a portrait card
-	&__image {
+	.o-card__image {
 		position: static;
 		float: none;
 		width: 100%;
 	}
 
 	// Normalise the styles for a heading in a portrait card
-	&__heading {
+	.o-card__heading {
 		float: none;
 		width: 100%;
 	}
@@ -36,29 +36,29 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 
-	&__tag,
-	&__standfirst,
-	&__timestamp {
+	.o-card__tag,
+	.o-card__standfirst,
+	.o-card__timestamp {
 		clear: left;
 		width: 100%;
 		flex: 0 0 100%;
 	}
 
-	&__standfirst {
+	.o-card__standfirst {
 		order: 4;
 	}
 
-	&__timestamp {
+	.o-card__timestamp {
 		order: 5;
 	}
 
 	// The headings should only be aligned based on the
 	// image alignment
-	&--image-right &__heading {
+	&.o-card--image-right .o-card__heading {
 		@include oCardHeaderLeft;
 	}
 
-	&--image-left &__heading {
+	&.o-card--image-left .o-card__heading {
 		@include oCardHeaderRight;
 	}
 }
