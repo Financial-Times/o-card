@@ -16,9 +16,18 @@ $o-hoverable-if-hover-enabled: '';
 
 	.o-card {
 		@include oCard;
-		@include oCardThemeLandscape;
-		@include oCardThemePortrait;
-		@include oCardThemeStandout;
+
+		&--landscape {
+			@include oCardThemeLandscape;
+		}
+
+		&--portrait {
+			@include oCardThemePortrait;
+		}
+
+		&--standout {
+			@include oCardThemeStandout;
+		}
 	}
 
 	.o-card__tag {

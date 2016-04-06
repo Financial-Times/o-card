@@ -5,60 +5,50 @@
 
 /// Stand out card theme styles
 @mixin oCardThemeStandout {
-	// e.g. .o-card--standout
-	&--standout {
-		@include oColorsFor(o-card-standout, background);
-	}
+	@include oColorsFor(o-card-standout, background);
 }
 
 /// Portrait card theme styles
 @mixin oCardThemePortrait {
-
-	&--portrait {
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: flex-start;
-	}
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
 
 	// Normalise the styles for an image in a portrait card
-	&--portrait &__image {
+	&__image {
 		position: static;
 		float: none;
 		width: 100%;
 	}
 
 	// Normalise the styles for a heading in a portrait card
-	&--portrait &__heading {
+	&__heading {
 		float: none;
 		width: 100%;
 	}
-
 }
 
 /// Landscape card theme base styles
 /// modifies block elements tag, standfirst, timestamp, image, and heading
 /// to adapt to a landscape/horizontal layout
 @mixin oCardThemeLandscape {
-	// e.g. .o-card--landscape
-	&--landscape {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 
-	&--landscape &__tag,
-	&--landscape &__standfirst,
-	&--landscape &__timestamp {
+	&__tag,
+	&__standfirst,
+	&__timestamp {
 		clear: left;
 		width: 100%;
 		flex: 0 0 100%;
 	}
 
-	&--landscape &__standfirst {
+	&__standfirst {
 		order: 4;
 	}
 
-	&--landscape &__timestamp {
+	&__timestamp {
 		order: 5;
 	}
 
