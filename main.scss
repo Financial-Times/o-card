@@ -12,13 +12,12 @@ $o-hoverable-if-hover-enabled: '';
 @import "src/scss/standard";
 
 @if $o-card-is-silent == false {
-	@include oFontsIncludeAll();
+	@include oFontsIncludeAll;
 
 	.o-card {
 		@include oCard;
 		@include oCardThemeLandscape;
 		@include oCardThemePortrait;
-		@include oCardThemeStandalone;
 		@include oCardThemeStandout;
 	}
 

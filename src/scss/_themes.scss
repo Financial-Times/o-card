@@ -3,14 +3,6 @@
 /// @link http://registry.origami.ft.com/components/o-card
 ////
 
-/// Stand alone card theme styles
-@mixin oCardThemeStandalone {
-	// e.g. .o-card--standalone
-	&--standalone {
-		border-bottom: 1px solid oColorsGetColorFor(o-card-shadow, shadow);
-	}
-}
-
 /// Stand out card theme styles
 @mixin oCardThemeStandout {
 	// e.g. .o-card--standout
