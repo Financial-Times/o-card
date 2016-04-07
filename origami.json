@@ -37,6 +37,17 @@
             }
         },
         {
+            "name": "opinion",
+            "expanded": false,
+            "description": "Opinion card with no image",
+            "template": "demos/src/main.mustache",
+            "data": {
+                "card-modifier": "opinion",
+                "card-timestamp": "2016-02-29T12:35:48Z",
+                "card-heading": "Japan sells negative yield 10-year bonds"
+            }
+        },
+        {
             "name": "image-horizontal",
             "expanded": false,
             "description": "Card with horizontally aligned image",

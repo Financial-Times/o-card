@@ -44,6 +44,10 @@ $o-hoverable-if-hover-enabled: '';
 
 	.o-card__tag {
 		@include oCardTag;
+
+		.o-card--opinion & {
+			@include oCardThemeOpinionTag;
+		}
 	}
 
 	.o-card__heading {

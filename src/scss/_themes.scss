@@ -8,6 +8,15 @@
 	@include oColorsFor(o-card-standout, background);
 }
 
+@mixin oCardThemeOpinionTag {
+	@include oTypographySerif(m);
+	color: $o-card-opinion-colour;
+
+	a {
+		color: inherit;
+	}
+}
+
 /// Portrait card theme styles
 @mixin oCardThemePortrait {
 	flex-direction: column;
