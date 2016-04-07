@@ -6,6 +6,7 @@
 /// Base card styles
 @mixin oCard {
 	@include oColorsFor(o-card box, background);
+	box-sizing: border-box;
 	width: 100%;
 	padding: $o-card-spacing-unit;
 	padding-bottom: 0;
@@ -13,10 +14,6 @@
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
-
-	&--image-right {
-		position: relative;
-	}
 }
 
 /// Base tag styles
@@ -31,6 +28,12 @@
 	#{$o-hoverable-if-hover-enabled} &:hover {
 		@include oColorsFor(o-card-tag-hover, text);
 	}
+}
+
+@mixin oCardContent {
+	box-sizing: inherit;
+	flex: 1 0 60%;
+	order: 2;
 }
 
 /// Base timestamp styles
@@ -72,6 +75,7 @@
 
 /// Card image styles, also applies top and bottom modifiers
 @mixin oCardImage {
+	box-sizing: inherit;
 	display: block;
 	margin: 0 0 $o-card-spacing-unit;
 
@@ -115,7 +119,7 @@
 	margin-top: 0;
 	margin-bottom: $o-card-spacing-unit;
 	padding-left: 0;
-	order: 6;
+	order: 6; // To appear below an image
 }
 
 /// Base related content item styles, including link styles
@@ -140,50 +144,30 @@
 	}
 }
 
-/// Styles for a right aligned header
-@mixin oCardHeaderRight {
-	// Combine the image size and spacing unit for use in calc()
-	$_full-image-size: $o-card-image-width + $o-card-spacing-unit;
-	// Float and width are for <=IE9 where flexbox is not supported
+@mixin oCardContentLeft {
 	float: left;
-	// Basic size for a heading <IE9
 	width: 60%;
-	// More accurate size for a heading in IE9, uses 95% as the image has a 5% margin-right
-	width: calc(95% - #{$_full-image-size});
-	// Heading should be at least 50% width, otherwise it will flow beneath the image
-	// Will grow to fill the remaining space when an image is left aligned and 100px
-	// or 100% of the space if there is no image
-	flex: 1 1 50%;
-	order: 3;
-	padding-right: $o-card-spacing-unit;
 }
 
-/// Styles for a left aligned header
-@mixin oCardHeaderLeft {
-	order: 3;
-	width: 45%;
-	padding-right: $o-card-spacing-unit;
+@mixin oCardContentRight {
+	float: right;
+	width: 60%;
 }
-
 
 /// Styles for a left aligned image
 @mixin oCardImageLeft {
 	float: left;
+	order: 1;
 	width: $o-card-image-width;
-	// Max width in case the container is resized enough to cause the layout to break
-	max-width: 30%;
-	flex-basis: $o-card-image-width;
-	// Move the image to appear second in the card after the tag
-	order: 2;
-	margin-right: 5%;
+	padding-right: $o-card-spacing-unit;
 }
 
 /// Styles for a right aligned image
 @mixin oCardImageRight {
-	position: absolute;
-	top: $o-card-spacing-unit;
-	right: $o-card-spacing-unit;
-	width: 50%;
+	float: right;
+	order: 3;
+	width: $o-card-image-width;
+	padding-left: $o-card-spacing-unit;
 }
 
 /// Styles to force an image to the top of the card
