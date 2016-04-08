@@ -11,7 +11,7 @@ Works as expected in all browsers that require "enhanced" and "core" support.
 
 ### SCSS:
 
-Add `@import 'o-card/main';` to you main SCSS file.
+Add `@import 'o-card/main';` to your main SCSS file.
 
 ### Default elements
 
