@@ -42,6 +42,18 @@ $o-hoverable-if-hover-enabled: '';
 		}
 	}
 
+	.o-card__meta {
+		@include oCardMeta;
+	}
+
+	.o-card__meta-image {
+		@include oCardMetaImage;
+
+		&--rounded {
+			@include oCardThemeMetaImageRounded;
+		}
+	}
+
 	.o-card__tag {
 		@include oCardTag;
 

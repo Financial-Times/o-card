@@ -40,8 +40,9 @@
             "name": "opinion",
             "expanded": false,
             "description": "Opinion card with no image",
-            "template": "demos/src/main.mustache",
+            "template": "demos/src/opinion.mustache",
             "data": {
+            	"card-meta-image": "http://image.webservices.ft.com/v1/images/raw/fthead:mrs-moneypenny?source=origami&width=60",
                 "card-modifier": "opinion",
                 "card-timestamp": "2016-02-29T12:35:48Z",
                 "card-heading": "Japan sells negative yield 10-year bonds"

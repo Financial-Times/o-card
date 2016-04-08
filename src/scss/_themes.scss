@@ -19,6 +19,14 @@
 	}
 }
 
+/// Styles for rounded meta images.
+/// Adds border radius and background colour
+@mixin oCardThemeMetaImageRounded {
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: $o-card-headshot-colour;
+}
+
 /// Portrait card theme styles.
 /// Modifies the card to a flex column.
 /// Resets o-card__image and o-card__content to fill the full width of the card

@@ -2,14 +2,15 @@
 	<div class="o-card o-card--{{card-modifier}} o-card--image-{{card-image-alignment}}" data-o-component="o-card">
 		<div class="o-card__content o-card__content-{{card-image-alignment}}">
 			<div class="o-card__meta">
+				{{#card-meta-image}}
+					<div class="o-card__meta-image o-card__meta-image--rounded">
+						<img src="{{card-meta-image}}" alt="Mrs Moneypenny">
+					</div>
+				{{/card-meta-image}}
 				<a href="#" class="o-card__tag">Demo card tag</a>
 			</div>
 
 			<h2 class="o-card__heading"><a href="#">{{card-heading}}</a></h2>
-
-			{{#card-standfirst}}
-				<p class="o-card__standfirst">{{card-standfirst}}</p>
-			{{/card-standfirst}}
 
 			{{#card-timestamp}}
 				<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{card-timestamp}}">{{card-timestamp}}</time>
@@ -21,13 +22,5 @@
 				<img src="{{card-image-url}}" alt="demo image"/>
 			</div>
 		{{/card-image-url}}
-
-		{{#card-related-content.length}}
-			<ul class="o-card__related-content">
-				{{#card-related-content}}
-					<li class="o-card__related-content-item"><a href="#">{{link}}</a></li>
-				{{/card-related-content}}
-			</ul>
-		{{/card-related-content.length}}
 	</div>
 </div>
