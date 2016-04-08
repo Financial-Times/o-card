@@ -8,6 +8,8 @@
 	@include oColorsFor(o-card-standout, background);
 }
 
+/// Styles for the o-card__tag element.
+/// Sets the colour and typography of an opinion card tag.
 @mixin oCardThemeOpinionTag {
 	@include oTypographySerif(m);
 	color: $o-card-opinion-colour;
@@ -17,7 +19,9 @@
 	}
 }
 
-/// Portrait card theme styles
+/// Portrait card theme styles.
+/// Modifies the card to a flex column.
+/// Resets o-card__image and o-card__content to fill the full width of the card
 @mixin oCardThemePortrait {
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -37,9 +41,8 @@
 	}
 }
 
-/// Landscape card theme base styles
-/// modifies block elements tag, standfirst, timestamp, image, and heading
-/// to adapt to a landscape/horizontal layout
+/// Landscape card theme styles.
+/// Modifies only the o-card element to switch to a flex row layout
 @mixin oCardThemeLandscape {
 	flex-direction: row;
 	flex-wrap: wrap;
