@@ -8,16 +8,12 @@
 	@include oColorsFor(o-card box, background);
 	box-sizing: border-box;
 	width: 100%;
-	padding: $o-card-spacing-unit;
-	padding-bottom: 0;
+	padding: $o-card-spacing-unit $o-card-spacing-unit 0;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
-}
-
-@mixin oCardMeta {
-
+	overflow: auto; // clear floats
 }
 
 @mixin oCardMetaImage {
@@ -42,7 +38,7 @@
 
 @mixin oCardContent {
 	box-sizing: inherit;
-	flex: 1 0 60%;
+	width: 100%;
 	order: 2;
 }
 
@@ -51,7 +47,7 @@
 	@include oColorsFor(o-card-timestamp, text);
 	@include oTypographySans(xs);
 	display: block;
-	margin: $o-card-spacing-unit 0;
+	padding: $o-card-spacing-unit 0;
 	text-transform: uppercase;
 }
 

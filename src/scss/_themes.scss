@@ -53,6 +53,18 @@
 /// Modifies only the o-card element to switch to a flex row layout
 @mixin oCardThemeLandscape {
 	flex-direction: row;
-	flex-wrap: wrap;
 	justify-content: space-between;
+
+	&.o-card--image-right .o-card__content,
+	&.o-card--image-left .o-card__content {
+		width: 60%;
+	}
+
+	&.o-card--image-right .o-card__content {
+		float: left;
+	}
+
+	&.o-card--image-left .o-card__content {
+		float: right;
+	}
 }
