@@ -17,7 +17,9 @@ Add `@import 'o-card/main';` to your main SCSS file.
 
 The following elements are supported by default:
 
+	.o-card__meta {} 					// Area for meta data like tags and author quotes/images
 	.o-card__tag {} 					// Small coloured tag at the top of the card
+	.o-card__meta-image {} 				// Area for an author image or tag image to appear (60px square)
 	.o-card__heading {} 				// Main heading of the card
 	.o-card__standfirst {} 				// A short piece of content
 	.o-card__image {}       			// An image for the card (with available [alignments](#image-alignment))
@@ -39,9 +41,9 @@ Each element class has a `@mixin` as well (e.g. `oCardTag`), however when using 
 
 There are three themes that can modify a card:
 
-* standalone - adds a highlight to the bottom of the card (to be used if not grouped on the same background)
 * standout - adds a darker background to the card
 * landscape - used for a wider card and allows for left and right [image alignments](#image-alignment).
+* opinion - changes the colour and typography of the card tag.
 
 ## Image alignment
 
@@ -54,10 +56,11 @@ The image can be aligned in four ways, depending on the layout of the card. The 
 
 ### Landscape card
 
-In a landscape card the image can be aligned `left` or `right`. In a landscape card, the heading will appear in the same row as the image and if used, a standfirst will appear below.
+In a landscape card the image can be aligned `left` or `right` at 40% width of the card. In a landscape card, the heading will appear in the same row as the image and if used, a standfirst will appear below.
 
-* left: image will appear on the left at `100px` width. Configured by `$o-card-image-width-left-align`.
-* right: image will appear on the right of the card aligned with the top, at `50%` width of the card.
+### Meta area and meta image
+
+The meta area of the card by itself has no style. It's used to contain the `card__tag` and `card__meta-image` elements. The meta image element is a container for an `img` tag or icon and also has a theme of `--rounded` to make the container circular.
 
 ----
 
