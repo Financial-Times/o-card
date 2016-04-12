@@ -5,7 +5,7 @@ Origami component for a card.
 
 ## Browser support
 
-Works as expected in all browsers that require "enhanced" and "core" support.
+Works as expected in all browsers that require "enhanced" and "core" support. The only exception is on browsers <=IE9, portrait cards will only support the image appearing at the top of the card.
 
 ## Usage
 

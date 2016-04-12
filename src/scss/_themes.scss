@@ -42,7 +42,6 @@
 		padding: 0;
 	}
 
-	// Normalise the styles for a heading in a portrait card
 	.o-card__content {
 		float: none;
 		width: 100%;
@@ -52,19 +51,10 @@
 /// Landscape card theme styles.
 /// Modifies only the o-card element to switch to a flex row layout
 @mixin oCardThemeLandscape {
-	flex-direction: row;
-	justify-content: space-between;
+	display: block;
 
-	&.o-card--image-right .o-card__content,
 	&.o-card--image-left .o-card__content {
 		width: 60%;
-	}
-
-	&.o-card--image-right .o-card__content {
-		float: left;
-	}
-
-	&.o-card--image-left .o-card__content {
 		float: right;
 	}
 }

@@ -1,6 +1,12 @@
 <div class="demo-container demo-container--{{card-modifier}}">
 	<div class="o-card o-card--{{card-modifier}} o-card--image-{{card-image-alignment}}" data-o-component="o-card">
-		<div class="o-card__content o-card__content-{{card-image-alignment}}">
+		{{#card-image-url}}
+			<div class="o-card__image o-card__image--{{card-image-alignment}}">
+				<img src="{{card-image-url}}" alt="demo image"/>
+			</div>
+		{{/card-image-url}}
+
+		<div class="o-card__content">
 			<div class="o-card__meta">
 				<a href="#" class="o-card__tag">Demo card tag</a>
 			</div>
@@ -15,12 +21,6 @@
 				<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{card-timestamp}}">{{card-timestamp}}</time>
 			{{/card-timestamp}}
 		</div>
-
-		{{#card-image-url}}
-			<div class="o-card__image o-card__image--{{card-image-alignment}}">
-				<img src="{{card-image-url}}" alt="demo image"/>
-			</div>
-		{{/card-image-url}}
 
 		{{#card-related-content.length}}
 			<ul class="o-card__related-content">

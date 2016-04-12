@@ -13,7 +13,9 @@ $o-card-spacing-unit: 10px;
 
 /// Size of image when left aligned
 /// @type {Number}
-$o-card-image-width: 40%;
+$o-card-image-left-width: 40%;
+
+$o-card-image-right-width: 50%;
 
 /// Colour of links and tags on Opinion cards
 /// @type {String}

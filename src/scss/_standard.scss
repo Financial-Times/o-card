@@ -150,29 +150,17 @@
 	}
 }
 
-@mixin oCardContentLeft {
-	float: left;
-	width: 60%;
-}
-
-@mixin oCardContentRight {
-	float: right;
-	width: 60%;
-}
-
 /// Styles for a left aligned image
 @mixin oCardImageLeft {
 	float: left;
-	order: 1;
-	width: $o-card-image-width;
+	width: $o-card-image-left-width;
 	padding-right: $o-card-spacing-unit;
 }
 
 /// Styles for a right aligned image
 @mixin oCardImageRight {
 	float: right;
-	order: 3;
-	width: $o-card-image-width;
+	width: $o-card-image-right-width;
 	padding-left: $o-card-spacing-unit;
 }
 
