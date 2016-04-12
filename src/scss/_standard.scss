@@ -16,6 +16,7 @@
 	overflow: auto; // clear floats
 }
 
+/// Base styles for meta image element floated to the right and fixed size
 @mixin oCardMetaImage {
 	float: right;
 	width: $o-card-meta-image-size;
@@ -36,6 +37,7 @@
 	}
 }
 
+/// Base styles for content element giving correct order and box-sizing
 @mixin oCardContent {
 	box-sizing: inherit;
 	width: 100%;

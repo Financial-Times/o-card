@@ -29,7 +29,7 @@
 
 /// Portrait card theme styles.
 /// Modifies the card to a flex column.
-/// Resets o-card__image and o-card__content to fill the full width of the card
+/// Resets o-card__image and o-card__content to remove floats and fill the full width of the card
 @mixin oCardThemePortrait {
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -49,7 +49,8 @@
 }
 
 /// Landscape card theme styles.
-/// Modifies only the o-card element to switch to a flex row layout
+/// Modifies the o-card element to switch to display block and modifies the card__content
+/// element if the card has a left aligned image
 @mixin oCardThemeLandscape {
 	display: block;
 

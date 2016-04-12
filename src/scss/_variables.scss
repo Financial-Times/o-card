@@ -15,12 +15,18 @@ $o-card-spacing-unit: 10px;
 /// @type {Number}
 $o-card-image-left-width: 40%;
 
+/// Size of image when right aligned
+/// @type {Number}
 $o-card-image-right-width: 50%;
 
 /// Colour of links and tags on Opinion cards
 /// @type {String}
 $o-card-opinion-colour: #416e92; // This should be put into o-colors
 
+/// Colour for the background of headshot images
+/// @type {String}
 $o-card-headshot-colour: #d0e2e7; // This should be put into o-colors
 
+/// Size of the meta image element
+/// @type {Number}
 $o-card-meta-image-size: 60px;
