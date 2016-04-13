@@ -40,8 +40,14 @@
 /// Base styles for content element giving correct order and box-sizing
 @mixin oCardContent {
 	box-sizing: inherit;
+	float: none;
 	width: 100%;
 	order: 2;
+}
+
+@mixin oCardContentRight {
+	width: 60%;
+	float: right;
 }
 
 /// Base timestamp styles
@@ -118,6 +124,12 @@
 		height: auto;
 		margin: 0;
 	}
+}
+
+@mixin oCardPortraitImage {
+	float: none;
+	width: 100%;
+	padding: 0;
 }
 
 /// Base related content list styles

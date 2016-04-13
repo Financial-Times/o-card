@@ -37,14 +37,11 @@
 
 	// Normalise the styles for an image in a portrait card
 	.o-card__image {
-		float: none;
-		width: 100%;
-		padding: 0;
+		@include oCardPortraitImage;
 	}
 
 	.o-card__content {
-		float: none;
-		width: 100%;
+		@include oCardContent;
 	}
 }
 
@@ -55,7 +52,6 @@
 	display: block;
 
 	&.o-card--image-left .o-card__content {
-		width: 60%;
-		float: right;
+		@include oCardContentRight;
 	}
 }
