@@ -56,7 +56,7 @@ The image can be aligned in four ways, depending on the layout of the card. The 
 
 ### Landscape card
 
-In a landscape card the image can be aligned `left` or `right` at 40% width of the card. In a landscape card, the heading will appear in the same row as the image and if used, a standfirst will appear below.
+In a landscape card the image can be aligned `left` (at 40% width of the card) or `right` (at 50% width of the card). In a landscape card, the heading will appear in the same row as the image and if used, a standfirst will appear below.
 
 ### Meta area and meta image
 
