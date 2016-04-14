@@ -22,9 +22,9 @@
 /// Styles for rounded meta images.
 /// Adds border radius and background colour
 @mixin oCardThemeMetaImageRounded {
+	@include oColorsFor(o-card-headshot, background);
 	border-radius: 50%;
 	overflow: hidden;
-	background-color: $o-card-headshot-colour;
 }
 
 /// Portrait card theme styles.
