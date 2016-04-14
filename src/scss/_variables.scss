@@ -13,4 +13,12 @@ $o-card-spacing-unit: 10px;
 
 /// Size of image when left aligned
 /// @type {Number}
-$o-card-image-width: 100px;
+$o-card-image-left-width: 40%;
+
+/// Size of image when right aligned
+/// @type {Number}
+$o-card-image-right-width: 50%;
+
+/// Size of the meta image element
+/// @type {Number}
+$o-card-meta-image-size: 60px;

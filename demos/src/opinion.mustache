@@ -1,0 +1,26 @@
+<div class="demo-container demo-container--{{card-modifier}}">
+	<div class="o-card o-card--{{card-modifier}} o-card--image-{{card-image-alignment}}" data-o-component="o-card">
+		<div class="o-card__content o-card__content-{{card-image-alignment}}">
+			<div class="o-card__meta">
+				{{#card-meta-image}}
+					<div class="o-card__meta-image o-card__meta-image--rounded">
+						<img src="{{card-meta-image}}" alt=" ">
+					</div>
+				{{/card-meta-image}}
+				<a href="#" class="o-card__tag">Mrs Moneypenny</a>
+			</div>
+
+			<h2 class="o-card__heading"><a href="#">{{card-heading}}</a></h2>
+
+			{{#card-timestamp}}
+				<time data-o-component="o-date" class="o-date o-card__timestamp" datetime="{{card-timestamp}}">{{card-timestamp}}</time>
+			{{/card-timestamp}}
+		</div>
+
+		{{#card-image-url}}
+			<div class="o-card__image o-card__image--{{card-image-alignment}}">
+				<img src="{{card-image-url}}" alt="demo image"/>
+			</div>
+		{{/card-image-url}}
+	</div>
+</div>

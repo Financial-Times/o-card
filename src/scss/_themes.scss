@@ -3,112 +3,55 @@
 /// @link http://registry.origami.ft.com/components/o-card
 ////
 
-/// Stand alone card theme styles
-///
-/// @param {String} $modifier [stand-alone] - the modifier classname you want to use
-@mixin oCardThemeStandalone($modifier: 'standalone') {
-	// e.g. .o-card--standalone
-	&--#{$modifier} {
-		border-bottom: 1px solid oColorsGetColorFor(o-card-shadow, shadow);
-	}
-}
-
 /// Stand out card theme styles
-///
-/// @param {String} $modifier [standout] - the modifier classname you want to use
-@mixin oCardThemeStandout($modifier: 'standout') {
-	// e.g. .o-card--standout
-	&--#{$modifier} {
-		@include oColorsFor(o-card-standout, background);
+@mixin oCardThemeStandout {
+	@include oColorsFor(o-card-standout, background);
+}
+
+/// Styles for the o-card__tag element.
+/// Sets the colour and typography of an opinion card tag.
+@mixin oCardThemeOpinionTag {
+	@include oTypographySerif(m);
+	@include oColorsFor(o-card-tag-opinion, text);
+
+	a {
+		color: inherit;
 	}
 }
 
-/// Landscape card theme base styles
-/// modifies block elements tag, standfirst, timestamp, image, and heading
-/// to adapt to a landscape/horizontal layout
-///
-/// @param {String} $modifier [landscape] - the modifier classname you want to use
-@mixin oCardThemeLandscapeBase($modifier: 'landscape') {
-	// e.g. .o-card--landscape
-	&--#{$modifier} {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
+/// Styles for rounded meta images.
+/// Adds border radius and background colour
+@mixin oCardThemeMetaImageRounded {
+	@include oColorsFor(o-card-headshot, background);
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+/// Portrait card theme styles.
+/// Modifies the card to a flex column.
+/// Resets o-card__image and o-card__content to remove floats and fill the full width of the card
+@mixin oCardThemePortrait {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+
+	// Normalise the styles for an image in a portrait card
+	.o-card__image {
+		@include oCardPortraitImage;
 	}
 
-	// e.g. .o-card--landscape .o-card__heading
-	&--#{$modifier} &__heading {
-		width: 100%;
-		// Order third so it will appear after a left aligned image and
-		// before a right aligned image (see above)
-		order: 3;
-	}
-
-	&--#{$modifier} &__tag,
-	&--#{$modifier} &__standfirst,
-	&--#{$modifier} &__timestamp {
-		clear: left;
-		width: 100%;
-		flex: 0 0 100%;
-	}
-
-	&--#{$modifier} &__standfirst {
-		order: 4;
-	}
-
-	&--#{$modifier} &__timestamp {
-		order: 5;
+	.o-card__content {
+		@include oCardContent;
 	}
 }
 
-/// Landscape card with image styles
-/// modifies card, heading, and image styles to adapt to a landscape/horizontal layout
-///
-/// @param {String} $modifier [landscape] - the modifier classname you want to use
-/// @param {String} $image-alignment [left] - alignment of an image in the landscape card
-@mixin oCardThemeLandscapeImage($modifier: 'landscape', $image-alignment: 'left') {
+/// Landscape card theme styles.
+/// Modifies the o-card element to switch to display block and modifies the card__content
+/// element if the card has a left aligned image
+@mixin oCardThemeLandscape {
+	display: block;
 
-	@if $image-alignment == 'right' {
-
-		// e.g. .o-card--landscape.o-card--image-right
-		&--#{$modifier}#{&}--image-right {
-			position: relative;
-		}
-
-		// e.g. .o-card--landscape.o-card--image-right .o-card__heading
-		&--#{$modifier}#{&}--image-right &__heading {
-			width: 45%;
-			padding-right: $o-card-spacing-unit;
-		}
-
-		// e.g. .o-card--landscape.o-card--image-right .o-card__image--right
-		&--#{$modifier} &__image--right {
-			@include oCardImageRight;
-		}
-
-	} @else {
-
-		// e.g. .o-card--landscape.o-card--image-left .o-card__heading
-		&--#{$modifier}#{&}--image-left &__heading {
-			// Combine the image size and spacing unit for use in calc()
-			$_full-image-size: $o-card-image-width + $o-card-spacing-unit;
-			// Float and width are for <=IE9 where flexbox is not supported
-			float: left;
-			// Basic size for a heading <IE9
-			width: 60%;
-			// More accurate size for a heading in IE9, uses 95% as the image has a 5% margin-right
-			width: calc(95% - #{$_full-image-size});
-			// Heading should be at least 50% width, otherwise it will flow beneath the image
-			// Will grow to fill the remaining space when an image is left aligned and 100px
-			// or 100% of the space if there is no image
-			flex: 1 1 50%;
-			padding-right: $o-card-spacing-unit;
-		}
-
-		// e.g. .o-card--landscape .o-card__image--left
-		&--#{$modifier} &__image--left {
-			@include oCardImageLeft;
-		}
-
+	&.o-card--image-left .o-card__content {
+		@include oCardContentRight;
 	}
 }

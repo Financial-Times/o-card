@@ -6,13 +6,21 @@
 /// Base card styles
 @mixin oCard {
 	@include oColorsFor(o-card box, background);
+	box-sizing: border-box;
 	width: 100%;
-	padding: $o-card-spacing-unit;
-	padding-bottom: 0;
+	padding: $o-card-spacing-unit $o-card-spacing-unit 0;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
+	overflow: auto; // clear floats
+}
+
+/// Base styles for meta image element floated to the right and fixed size
+@mixin oCardMetaImage {
+	float: right;
+	width: $o-card-meta-image-size;
+	height: $o-card-meta-image-size;
 }
 
 /// Base tag styles
@@ -29,12 +37,25 @@
 	}
 }
 
+/// Base styles for content element giving correct order and box-sizing
+@mixin oCardContent {
+	box-sizing: inherit;
+	float: none;
+	width: 100%;
+	order: 2;
+}
+
+@mixin oCardContentRight {
+	width: 60%;
+	float: right;
+}
+
 /// Base timestamp styles
 @mixin oCardTimestamp {
 	@include oColorsFor(o-card-timestamp, text);
 	@include oTypographySans(xs);
 	display: block;
-	margin: $o-card-spacing-unit 0;
+	padding: $o-card-spacing-unit 0;
 	text-transform: uppercase;
 }
 
@@ -68,6 +89,7 @@
 
 /// Card image styles, also applies top and bottom modifiers
 @mixin oCardImage {
+	box-sizing: inherit;
 	display: block;
 	margin: 0 0 $o-card-spacing-unit;
 
@@ -84,10 +106,16 @@
 		@include oCardImageTop;
 	}
 
-	// Ensure image goes to the bottom of the card
-	// set to '6' in case anyone re-orders other card elements
+	&--right {
+		@include oCardImageRight;
+	}
+
 	&--bottom {
 		@include oCardImageBottom;
+	}
+
+	&--left {
+		@include oCardImageLeft;
 	}
 
 	img {
@@ -98,6 +126,12 @@
 	}
 }
 
+@mixin oCardPortraitImage {
+	float: none;
+	width: 100%;
+	padding: 0;
+}
+
 /// Base related content list styles
 @mixin oCardRelatedContent {
 	@include oColorsFor(o-card-list, text);
@@ -105,7 +139,7 @@
 	margin-top: 0;
 	margin-bottom: $o-card-spacing-unit;
 	padding-left: 0;
-	order: 6;
+	order: 6; // To appear below an image
 }
 
 /// Base related content item styles, including link styles
@@ -133,21 +167,15 @@
 /// Styles for a left aligned image
 @mixin oCardImageLeft {
 	float: left;
-	width: $o-card-image-width;
-	// Max width in case the container is resized enough to cause the layout to break
-	max-width: 30%;
-	flex-basis: $o-card-image-width;
-	// Move the image to appear second in the card after the tag
-	order: 2;
-	margin-right: 5%;
+	width: $o-card-image-left-width;
+	padding-right: $o-card-spacing-unit;
 }
 
 /// Styles for a right aligned image
 @mixin oCardImageRight {
-	position: absolute;
-	top: $o-card-spacing-unit;
-	right: $o-card-spacing-unit;
-	width: 50%;
+	float: right;
+	width: $o-card-image-right-width;
+	padding-left: $o-card-spacing-unit;
 }
 
 /// Styles to force an image to the top of the card
@@ -157,5 +185,7 @@
 
 /// Styles to force an image to the bottom of the card
 @mixin oCardImageBottom {
+	// Ensure image goes to the bottom of the card
+	// set to '6' in case anyone re-orders other card elements
 	order: 6;
 }

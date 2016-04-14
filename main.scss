@@ -12,20 +12,42 @@ $o-hoverable-if-hover-enabled: '';
 @import "src/scss/standard";
 
 @if $o-card-is-silent == false {
-	@include oFontsIncludeAll();
+	@include oFontsIncludeAll;
 
 	.o-card {
 		@include oCard;
-		@include oCardThemeLandscapeBase;
-		@include oCardThemeStandalone;
-		@include oCardThemeStandout;
 
-		@include oCardThemeLandscapeImage($image-alignment: 'left');
-		@include oCardThemeLandscapeImage($image-alignment: 'right');
+		&--landscape {
+			@include oCardThemeLandscape;
+		}
+
+		&--portrait {
+			@include oCardThemePortrait;
+		}
+
+		&--standout {
+			@include oCardThemeStandout;
+		}
+	}
+
+	.o-card__content {
+		@include oCardContent;
+	}
+
+	.o-card__meta-image {
+		@include oCardMetaImage;
+
+		&--rounded {
+			@include oCardThemeMetaImageRounded;
+		}
 	}
 
 	.o-card__tag {
 		@include oCardTag;
+
+		.o-card--opinion & {
+			@include oCardThemeOpinionTag;
+		}
 	}
 
 	.o-card__heading {
