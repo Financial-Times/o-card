@@ -12,7 +12,7 @@
 /// Sets the colour and typography of an opinion card tag.
 @mixin oCardThemeOpinionTag {
 	@include oTypographySerif(m);
-	color: $o-card-opinion-colour;
+	@include oColorsFor(o-card-tag-opinion, text);
 
 	a {
 		color: inherit;
