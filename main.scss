@@ -73,6 +73,6 @@ $o-hoverable-if-hover-enabled: '';
 	}
 }
 
-@if $o-card-output-fonts-silent == false {
+@if $o-card-output-fonts == true {
 	@include oFontsIncludeAll;
 }

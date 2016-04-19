@@ -9,7 +9,7 @@ $o-card-is-silent: true !default;
 
 /// Active mode
 /// @type Bool
-$o-card-output-fonts-silent: true !default;
+$o-card-output-fonts: false !default;
 
 /// Size of spacing used throughout the component
 /// @type {Number}
