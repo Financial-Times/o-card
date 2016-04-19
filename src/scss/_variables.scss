@@ -7,6 +7,10 @@
 /// @type Bool
 $o-card-is-silent: true !default;
 
+/// Silent mode
+/// @type Bool
+$o-fonts-is-silent: true !default;
+
 /// Size of spacing used throughout the component
 /// @type {Number}
 $o-card-spacing-unit: 10px;

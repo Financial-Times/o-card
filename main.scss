@@ -12,8 +12,6 @@ $o-hoverable-if-hover-enabled: '';
 @import "src/scss/standard";
 
 @if $o-card-is-silent == false {
-	@include oFontsIncludeAll;
-
 	.o-card {
 		@include oCard;
 
@@ -73,4 +71,8 @@ $o-hoverable-if-hover-enabled: '';
 	.o-card__related-content-item {
 		@include oCardRelatedContentItem;
 	}
+}
+
+@if $o-fonts-is-silent == false {
+	@include oFontsIncludeAll;
 }
