@@ -136,9 +136,8 @@
 @mixin oCardRelatedContent {
 	@include oColorsFor(o-card-list, text);
 	list-style: none inside;
-	margin-top: 0;
-	margin-bottom: $o-card-spacing-unit;
-	padding-left: 0;
+	margin: 5px 0 $o-card-spacing-unit;
+	padding: 0;
 	order: 6; // To appear below an image
 }
 
