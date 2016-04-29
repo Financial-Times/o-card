@@ -136,7 +136,7 @@
 @mixin oCardRelatedContent {
 	@include oColorsFor(o-card-list, text);
 	list-style: none inside;
-	margin: 5px 0 $o-card-spacing-unit;
+	margin: $o-card-spacing-unit/2 0 $o-card-spacing-unit; // Top margin is set as half bottom margin
 	padding: 0;
 	order: 6; // To appear below an image
 }
@@ -182,7 +182,7 @@
 /// Styles to force an image to the top of the card
 @mixin oCardImageTop {
 	order: -1;
-	margin: 0 0 oGridGutter();
+	margin: 0 0 $o-card-spacing-unit;
 }
 
 /// Styles to force an image to the bottom of the card
@@ -190,5 +190,5 @@
 	// Ensure image goes to the bottom of the card
 	// set to '6' in case anyone re-orders other card elements
 	order: 6;
-	margin: oGridGutter() 0 0;
+	margin: $o-card-spacing-unit 0 0;
 }
