@@ -31,6 +31,7 @@
 /// Modifies the card to a flex column.
 /// Resets o-card__image and o-card__content to remove floats and fill the full width of the card
 @mixin oCardThemePortrait {
+	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
