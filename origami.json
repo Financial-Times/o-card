@@ -1,7 +1,7 @@
 {
     "description": "Card view of any kind of content",
     "origamiType": "module",
-    "origamiGroup": "component",
+    "origamiCategory": "components",
     "origamiVersion": 1,
     "support": "https://github.com/Financial-Times/o-card/issues",
     "supportStatus": "active",
