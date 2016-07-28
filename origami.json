@@ -142,6 +142,13 @@
                 	{"link": "Last related story"}
                 ]
             }
+        },
+				{
+            "name": "pa11y",
+            "expanded": false,
+            "description": "Pa11y test to check accessibility",
+            "template": "demos/src/pa11y.mustache",
+						"data": []
         }
-    ]
+		]
 }
