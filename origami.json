@@ -16,7 +16,6 @@
     "demos": [
         {
             "name": "standard",
-            "expanded": true,
             "description": "Standard card",
             "template": "demos/src/main.mustache",
             "data": {
@@ -26,7 +25,7 @@
         },
         {
             "name": "standout",
-            "expanded": false,
+            "hidden": true,
             "description": "Card with vertically aligned image",
             "template": "demos/src/main.mustache",
             "data": {
@@ -38,7 +37,7 @@
         },
         {
             "name": "opinion",
-            "expanded": false,
+            "hidden": true,
             "description": "Opinion card with no image",
             "template": "demos/src/opinion.mustache",
             "data": {
@@ -50,7 +49,7 @@
         },
         {
             "name": "image-horizontal",
-            "expanded": false,
+            "hidden": true,
             "description": "Card with horizontally aligned image",
             "template": "demos/src/main.mustache",
             "data": {
@@ -63,7 +62,7 @@
         },
         {
             "name": "image-horizontal-right",
-            "expanded": false,
+            "hidden": true,
             "description": "Card with horizontally aligned image",
             "template": "demos/src/main.mustache",
             "data": {
@@ -81,7 +80,7 @@
         },
         {
             "name": "horizontal",
-            "expanded": false,
+            "hidden": true,
             "description": "Horizontally aligned card",
             "template": "demos/src/main.mustache",
             "data": {
@@ -93,7 +92,7 @@
         },
         {
             "name": "image-horizontal-standfirst",
-            "expanded": false,
+            "hidden": true,
             "description": "Card with horizontally aligned image and excerpt text",
             "template": "demos/src/main.mustache",
             "data": {
@@ -107,7 +106,7 @@
         },
         {
             "name": "full-content-image-top",
-            "expanded": false,
+            "hidden": true,
             "description": "Large Card with all content examples",
             "template": "demos/src/main.mustache",
             "data": {
@@ -126,7 +125,7 @@
         },
         {
             "name": "full-content-image-bottom",
-            "expanded": false,
+            "hidden": true,
             "description": "Large Card with all content examples",
             "template": "demos/src/main.mustache",
             "data": {
