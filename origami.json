@@ -25,7 +25,6 @@
         },
         {
             "name": "standout",
-            "hidden": true,
             "description": "Card with vertically aligned image",
             "template": "demos/src/main.mustache",
             "data": {
@@ -37,7 +36,6 @@
         },
         {
             "name": "opinion",
-            "hidden": true,
             "description": "Opinion card with no image",
             "template": "demos/src/opinion.mustache",
             "data": {
@@ -49,7 +47,6 @@
         },
         {
             "name": "image-horizontal",
-            "hidden": true,
             "description": "Card with horizontally aligned image",
             "template": "demos/src/main.mustache",
             "data": {
@@ -106,7 +103,6 @@
         },
         {
             "name": "full-content-image-top",
-            "hidden": true,
             "description": "Large Card with all content examples",
             "template": "demos/src/main.mustache",
             "data": {
