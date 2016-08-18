@@ -73,6 +73,10 @@
 	a {
 		color: inherit;
 		text-decoration: none;
+
+		&:visited {
+			@include oColorsFor(o-card-link-visited, text);
+		}
 	}
 
 	#{$o-hoverable-if-hover-enabled} a:hover {
