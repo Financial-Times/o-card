@@ -86,8 +86,8 @@
 
 /// Base standfirst text styles
 @mixin oCardStandfirst {
-	@include oColorsFor(o-card-excerpt, text);
-	@include oTypographySans(s);
+	@include oColorsFor(o-card-standfirst, text);
+	@include oTypographySerif(s);
 	margin: 0;
 }
 
