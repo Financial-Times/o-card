@@ -17,7 +17,6 @@
     "demos": [
         {
             "name": "standard",
-            "expanded": true,
             "description": "Standard card",
             "template": "demos/src/main.mustache",
             "data": {
@@ -27,7 +26,6 @@
         },
         {
             "name": "standout",
-            "expanded": true,
             "description": "Card with vertically aligned image",
             "template": "demos/src/main.mustache",
             "data": {
@@ -39,7 +37,6 @@
         },
         {
             "name": "opinion",
-            "expanded": true,
             "description": "Opinion card with no image",
             "template": "demos/src/opinion.mustache",
             "data": {
@@ -51,7 +48,6 @@
         },
         {
             "name": "image-horizontal",
-            "expanded": false,
             "description": "Card with horizontally aligned image",
             "template": "demos/src/main.mustache",
             "data": {
@@ -64,8 +60,6 @@
         },
         {
             "name": "image-horizontal-right",
-            "expanded": false,
-            "hidden": true,
             "description": "Card with horizontally aligned image",
             "template": "demos/src/main.mustache",
             "data": {
@@ -83,8 +77,6 @@
         },
         {
             "name": "horizontal",
-            "expanded": false,
-            "hidden": true,
             "description": "Horizontally aligned card",
             "template": "demos/src/main.mustache",
             "data": {
@@ -95,48 +87,12 @@
             }
         },
         {
-            "name": "image-horizontal-standfirst",
-            "expanded": false,
-            "hidden": true,
-            "description": "Card with horizontally aligned image and excerpt text",
-            "template": "demos/src/main.mustache",
-            "data": {
-                "card-image-url": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?source=o-card-demo",
-                "card-image-alignment": "left",
-                "card-modifier": "landscape",
-                "card-timestamp": "2016-02-29T12:35:48Z",
-                "card-heading": "Japan sells negative yield 10-year bonds",
-                "card-standfirst": "Bondholders pay government for the privilege of lending it money"
-            }
-        },
-        {
             "name": "full-content-image-top",
-            "expanded": true,
             "description": "Large Card with all content examples",
             "template": "demos/src/main.mustache",
             "data": {
                 "card-image-url": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?source=o-card-demo",
                 "card-image-alignment": "top",
-                "card-modifier": "portrait",
-                "card-timestamp": "2016-02-29T12:35:48Z",
-                "card-heading": "Japan sells negative yield 10-year bonds",
-                "card-standfirst": "Bondholders pay government for the privilege of lending it money",
-                "card-related-content": [
-                	{"link": "Example related story"},
-                	{"link": "Another related story"},
-                	{"link": "Last related story"}
-                ]
-            }
-        },
-        {
-            "name": "full-content-image-bottom",
-            "expanded": false,
-            "hidden": true,
-            "description": "Large Card with all content examples",
-            "template": "demos/src/main.mustache",
-            "data": {
-                "card-image-url": "https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fim.ft-static.com%2Fcontent%2Fimages%2Fa60ae24b-b87f-439c-bf1b-6e54946b4cf2.img?source=o-card-demo",
-                "card-image-alignment": "bottom",
                 "card-modifier": "portrait",
                 "card-timestamp": "2016-02-29T12:35:48Z",
                 "card-heading": "Japan sells negative yield 10-year bonds",
