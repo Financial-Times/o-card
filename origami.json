@@ -17,6 +17,7 @@
     "demos": [
         {
             "name": "standard",
+            "title": "Standard",
             "description": "Standard card",
             "template": "demos/src/main.mustache",
             "data": {
@@ -26,6 +27,7 @@
         },
         {
             "name": "standout",
+            "title": "Standout",
             "description": "Card with vertically aligned image",
             "template": "demos/src/main.mustache",
             "data": {
@@ -37,6 +39,7 @@
         },
         {
             "name": "opinion",
+            "title": "Opinion",
             "description": "Opinion card with no image",
             "template": "demos/src/opinion.mustache",
             "data": {
@@ -48,6 +51,7 @@
         },
         {
             "name": "image-horizontal",
+            "title": "Card with horizontal image",
             "description": "Card with horizontally aligned image",
             "template": "demos/src/main.mustache",
             "data": {
@@ -60,6 +64,7 @@
         },
         {
             "name": "image-horizontal-right",
+            "title": "Card with right aligned horizontal image",
             "description": "Card with horizontally aligned image",
             "template": "demos/src/main.mustache",
             "data": {
@@ -77,6 +82,7 @@
         },
         {
             "name": "horizontal",
+            "title": "Horizontal",
             "description": "Horizontally aligned card",
             "template": "demos/src/main.mustache",
             "data": {
@@ -88,6 +94,7 @@
         },
         {
             "name": "full-content-image-top",
+            "title": "Large card full content",
             "description": "Large Card with all content examples",
             "template": "demos/src/main.mustache",
             "data": {
