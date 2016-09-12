@@ -13,3 +13,7 @@ $o-card-is-silent: false;
 .demo-container--landscape {
 	width: 350px;
 }
+
+.demo-tag-hover {
+	@include oColorsFor(o-card-tag-hover, text);
+}

@@ -110,6 +110,12 @@
                 	{"link": "Last related story"}
                 ]
             }
+        },
+        {
+            "name": "pa11y",
+            "title": "Pa11y accessibility test",
+            "description": "Several uses cases to test accessibility",
+            "template": "demos/src/pa11y.mustache"
         }
     ]
 }
