@@ -1,11 +1,12 @@
 o-card [![Circle CI](https://circleci.com/gh/Financial-Times/o-card/tree/master.svg?style=svg)](https://circleci.com/gh/Financial-Times/o-card/tree/master)
 =================
 
-Origami component for a card.
+This component is for displaying cards
 
-## Browser support
-
-Works as expected in all browsers that require "enhanced" and "core" support. The only exception is on browsers <=IE9, portrait cards will only support the image appearing at the top of the card.
+- [Usage](#usage)
+	- [Sass](#sass)
+- [Contact](#contact)
+- [Licence](#licence)
 
 ## Usage
 
@@ -61,6 +62,13 @@ In a landscape card the image can be aligned `left` (at 40% width of the card) o
 ### Meta area and meta image
 
 The meta area of the card by itself has no style. It's used to contain the `card__tag` and `card__meta-image` elements. The meta image element is a container for an `img` tag or icon and also has a theme of `--rounded` to make the container circular.
+
+----
+
+## Contact
+
+If you have any questions or comments about this component, or need help using it, please either [raise an issue](https://github.com/Financial-Times/o-card/issues), visit [#ft-origami](https://financialtimes.slack.com/messages/ft-origami/) or email [Origami Support](mailto:origami-support@ft.com).
+
 
 ----
 
