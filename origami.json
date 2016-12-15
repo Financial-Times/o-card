@@ -114,6 +114,7 @@
         {
             "name": "pa11y",
             "title": "Pa11y accessibility test",
+            "hidden": true,
             "description": "Several uses cases to test accessibility",
             "template": "demos/src/pa11y.mustache"
         }
