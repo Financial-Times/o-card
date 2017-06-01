@@ -12,7 +12,7 @@
     "demosDefaults": {
         "sass": "demos/src/main.scss",
         "documentClasses": "",
-        "dependencies": "o-date@^2.2.1"
+        "dependencies": "o-date@^2.8.0"
     },
     "demos": [
         {
