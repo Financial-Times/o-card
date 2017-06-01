@@ -26,7 +26,7 @@
 /// Base tag styles
 @mixin oCardTag {
 	@include oColorsFor(o-card-tag, text);
-	@include oTypographySansBold(-2);
+	@include oTypographySansBold(0);
 	display: block;
 	margin: 0 0 $o-card-spacing-unit;
 	// If the tag is used as a link
