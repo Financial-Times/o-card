@@ -26,7 +26,7 @@
 /// Base tag styles
 @mixin oCardTag {
 	@include oColorsFor(o-card-tag, text);
-	@include oTypographySansBold(s);
+	@include oTypographySansBold(-2);
 	display: block;
 	margin: 0 0 $o-card-spacing-unit;
 	// If the tag is used as a link
@@ -53,7 +53,7 @@
 /// Base timestamp styles
 @mixin oCardTimestamp {
 	@include oColorsFor(o-card-timestamp, text);
-	@include oTypographySans(xs);
+	@include oTypographySans(-2);
 	display: block;
 	padding: $o-card-spacing-unit 0;
 	text-transform: uppercase;
@@ -61,12 +61,12 @@
 
 /// Base heading styles (includes link styles within the element)
 @mixin oCardHeading {
-	@include oTypographyHeading2;
+	@include oTypographyHeadingLevel2;
 	@include oColorsFor(link-title, text);
 	margin-bottom: $o-card-spacing-unit;
 
 	&--small {
-		@include oTypographyHeading3;
+		@include oTypographyHeadingLevel3;
 	}
 
 	// If there is a link in the heading
@@ -87,7 +87,7 @@
 /// Base standfirst text styles
 @mixin oCardStandfirst {
 	@include oColorsFor(o-card-standfirst, text);
-	@include oTypographySerif(s);
+	@include oTypographySerif(0);
 	margin: 0;
 }
 
@@ -147,7 +147,7 @@
 
 /// Base related content item styles, including link styles
 @mixin oCardRelatedContentItem {
-	@include oTypographySans(s);
+	@include oTypographySans(-2);
 	@include oColorsFor(link-title, text);
 	padding: 2px 0;
 
