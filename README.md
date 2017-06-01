@@ -5,6 +5,7 @@ This component is for displaying cards
 
 - [Usage](#usage)
 	- [Sass](#sass)
+- [Migration guide](#migration-guide)
 - [Contact](#contact)
 - [Licence](#licence)
 
@@ -62,6 +63,12 @@ In a landscape card the image can be aligned `left` (at 40% width of the card) o
 ### Meta area and meta image
 
 The meta area of the card by itself has no style. It's used to contain the `card__tag` and `card__meta-image` elements. The meta image element is a container for an `img` tag or icon and also has a theme of `--rounded` to make the container circular.
+
+## Migration Guide
+
+### Updating from v2 to v3
+
+V2 -> V3 introduces the new majors of `o-colors` and `o-typography`. Updating to this new version will mean updating any other components that you have which are using `o-colors` or `o-typography`. There are no other breaking changes in this release.
 
 ----
 
