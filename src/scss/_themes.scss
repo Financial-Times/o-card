@@ -11,7 +11,7 @@
 /// Styles for the o-card__tag element.
 /// Sets the colour and typography of an opinion card tag.
 @mixin oCardThemeOpinionTag {
-	@include oTypographySerif(m);
+	@include oTypographySerif(2);
 	@include oColorsFor(o-card-tag-opinion, text);
 
 	a {

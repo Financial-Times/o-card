@@ -1,10 +1,10 @@
-@include oColorsSetUseCase(o-card, background, 'pink');
-@include oColorsSetUseCase(o-card-standout, background, 'pink-tint2');
-@include oColorsSetUseCase(o-card-tag, text, 'claret-1');
-@include oColorsSetUseCase(o-card-tag-hover, text, 'cold-1');
-@include oColorsSetUseCase(o-card-tag-opinion, text, 'blue');
-@include oColorsSetUseCase(o-card-timestamp, text, 'warm-6');
-@include oColorsSetUseCase(o-card-standfirst, text, 'cold-1');
-@include oColorsSetUseCase(o-card-list, text, 'cold-1');
-@include oColorsSetUseCase(o-card-headshot, background, 'blue-tint5');
-@include oColorsSetUseCase(o-card-link-visited, text, 'grey-tint3');
+@include oColorsSetUseCase(o-card, background, 'paper');
+@include oColorsSetUseCase(o-card-standout, background, 'black-10');
+@include oColorsSetUseCase(o-card-tag, text, 'claret');
+@include oColorsSetUseCase(o-card-tag-hover, text, 'black-70');
+@include oColorsSetUseCase(o-card-tag-opinion, text, 'oxford');
+@include oColorsSetUseCase(o-card-timestamp, text, 'lemon'); // consult a designer (black-80 recommended)
+@include oColorsSetUseCase(o-card-standfirst, text, 'black-70');
+@include oColorsSetUseCase(o-card-list, text, 'black-70');
+@include oColorsSetUseCase(o-card-headshot, background, 'lemon'); // consult a designer
+@include oColorsSetUseCase(o-card-link-visited, text, 'black-50');
