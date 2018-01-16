@@ -1,13 +1,8 @@
-o-card [![Circle CI](https://circleci.com/gh/Financial-Times/o-card/tree/master.svg?style=svg)](https://circleci.com/gh/Financial-Times/o-card/tree/master)
-=================
+# o -card
 
-This component is for displaying cards
+This component has now been deprecated. Please use [o-teaser](https://github.com/Financial-Times/o-typography).
 
-- [Usage](#usage)
-	- [Sass](#sass)
-- [Migration guide](#migration-guide)
-- [Contact](#contact)
-- [Licence](#licence)
+---
 
 ## Usage
 
@@ -69,13 +64,6 @@ The meta area of the card by itself has no style. It's used to contain the `card
 ### Updating from v2 to v3
 
 V2 -> V3 introduces the new majors of `o-colors` and `o-typography`. Updating to this new version will mean updating any other components that you have which are using `o-colors` or `o-typography`. There are no other breaking changes in this release.
-
-----
-
-## Contact
-
-If you have any questions or comments about this component, or need help using it, please either [raise an issue](https://github.com/Financial-Times/o-card/issues), visit [#ft-origami](https://financialtimes.slack.com/messages/ft-origami/) or email [Origami Support](mailto:origami-support@ft.com).
-
 
 ----
 
