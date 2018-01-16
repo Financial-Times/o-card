@@ -1,6 +1,6 @@
 # o -card
 
-This component has now been deprecated. Please use [o-teaser](https://github.com/Financial-Times/o-typography).
+This component has now been deprecated. Please use [o-teaser](https://github.com/Financial-Times/o-teaser).
 
 ---
 
